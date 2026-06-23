@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container mx-auto">
+            <nav class="flex justify-between text-center h-16 items-center font-bold px-3 lg:px-5">
+                <div class="lg:hidden flex">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
+                            <path d="M0 0h24v24H0z" fill="none" />
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="M3 17h18M3 12h18M3 7h18" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="text-2xl">
+                    <a href="#">L O G O</a>
+                </div>
+                <ul class="hidden lg:flex gap-6">
+                    <li><a href="#" class="border-b-2 border-transparent hover:border-black transition duration-300">
+                            Shop</a>
+                    </li>
+                    <li><a href="#" class="border-b-2 border-transparent hover:border-black transition duration-300">
+                            On Sale</a>
+                    </li>
+                    <li><a href="#" class="border-b-2 border-transparent hover:border-black transition duration-300">
+                            New Arivals</a>
+                    </li>
+                    <li><a href="#" class="border-b-2 border-transparent hover:border-black transition duration-300">
+                            Brands</a>
+                    </li>
+                </ul>
+                <label class="input hidden lg:flex rounded-full">
+                    <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
+                            stroke="currentColor">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.3-4.3"></path>
+                        </g>
+                    </svg>
+                    <input type="search" required placeholder="Search" />
+                </label>
+                <div class="flex gap-2 text-2xl">
+                    <div class="lg:hidden">
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path fill="currentColor"
+                                    d="m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5t1.888-4.612T9.5 3t4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3zM9.5 14q1.875 0 3.188-1.312T14 9.5t-1.312-3.187T9.5 5T6.313 6.313T5 9.5t1.313 3.188T9.5 14" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path fill="currentColor"
+                                    d="M21 6H7.05L5.94 2.68A1 1 0 0 0 4.99 2h-3v2h2.28l3.54 10.63A2 2 0 0 0 9.71 16h7.59a2 2 0 0 0 1.87-1.3l2.76-7.35c.11-.31.07-.65-.11-.92A1 1 0 0 0 21 6m-3.69 8H9.72l-2-6h11.84zM10 18a2 2 0 1 0 0 4a2 2 0 1 0 0-4m7 0a2 2 0 1 0 0 4a2 2 0 1 0 0-4" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+                                <path d="M0 0h16v16H0z" fill="none" />
+                                <path fill="currentColor"
+                                    d="M11 7c0 1.66-1.34 3-3 3S5 8.66 5 7s1.34-3 3-3s3 1.34 3 3" />
+                                <path fill="currentColor" fill-rule="evenodd"
+                                    d="M16 8c0 4.42-3.58 8-8 8s-8-3.58-8-8s3.58-8 8-8s8 3.58 8 8M4 13.75C4.16 13.484 5.71 11 7.99 11c2.27 0 3.83 2.49 3.99 2.75A6.98 6.98 0 0 0 14.99 8c0-3.87-3.13-7-7-7s-7 3.13-7 7c0 2.38 1.19 4.49 3.01 5.75"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div>
+        <div class="container mx-auto">
+            <div class="breadcrumbs text-sm border-t-1 border-zinc-300 py-[20px]">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>Shop</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="container mx-auto">
+            <div class="grid grid-cols-4 gap-1">
+                <aside>
+                    <div class="menu rounded-2xl w-56 border-1 border-zinc-200">
+                        <div>
+                            <div class="menu-title text-lg text-black font-bold border-b-1 border-zinc-300 p-3">
+                                Filter
+                            </div>
+                        </div>
+                        <ul class="border-b-1 border-zinc-300">
+                            <li><a>T-shirt</a></li>
+                            <li><a>Shorts</a></li>
+                            <li><a>Shirts</a></li>
+                            <li><a>Hoodie</a></li>
+                            <li><a>Jeans</a></li>
+                        </ul>
+
+                        <details class="collapse collapse-plus">
+                            <summary class="collapse-title text-lg text-black font-bold p-3">Price</summary>
+                            <div class="collapse-content">
+                                <input type="range" min="0" max="100" class="range range-xs" />
+                            </div>
+                        </details>
+
+                        <details class="collapse collapse-plus">
+                            <summary class="collapse-title text-lg text-black font-bold p-3 border-t-1 border-zinc-300">
+                                Color</summary>
+                            <div class="collapse-content">
+                                <div class="flex flex-wrap gap-2 my-2">
+                                    <button
+                                        class="hover:cursor-pointer w-7 h-7 rounded-full bg-green-500 ring-1 ring-zinc-400"></button>
+                                    <button
+                                        class="hover:cursor-pointer w-7 h-7 rounded-full bg-red-500 ring-1 ring-zinc-400"></button>
+                                    <button
+                                        class="hover:cursor-pointer w-7 h-7 rounded-full bg-yellow-500 ring-1 ring-zinc-400"></button>
+                                    <button
+                                        class="hover:cursor-pointer w-7 h-7 rounded-full bg-orange-500 ring-1 ring-zinc-400"></button>
+                                    <button
+                                        class="hover:cursor-pointer w-7 h-7 rounded-full bg-blue-500 ring-1 ring-zinc-400"></button>
+                                    <button
+                                        class="hover:cursor-pointer w-7 h-7 rounded-full bg-sky-500 ring-1 ring-zinc-400"></button>
+                                    <button
+                                        class="hover:cursor-pointer w-7 h-7 rounded-full bg-violet-500 ring-1 ring-zinc-400"></button>
+                                    <button
+                                        class="hover:cursor-pointer w-7 h-7 rounded-full bg-pink-500 ring-1 ring-zinc-400"></button>
+                                    <button
+                                        class="hover:cursor-pointer w-7 h-7 rounded-full bg-white ring-1 ring-zinc-400"></button>
+                                    <button
+                                        class="hover:cursor-pointer w-7 h-7 rounded-full bg-black ring-1 ring-zinc-400"></button>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details class="collapse collapse-plus">
+                            <summary class="collapse-title text-lg text-black font-bold p-3 border-t-1 border-zinc-300">
+                                Size</summary>
+                            <div class="collapse-content">
+                                <div>
+                                    <div class="flex flex-wrap gap-2">
+                                        <input type="radio" name="size" class="btn rounded-full" aria-label="S" />
+                                        <input type="radio" name="size" class="btn rounded-full" aria-label="M" />
+                                        <input type="radio" name="size" class="btn rounded-full" aria-label="L" />
+                                        <input type="radio" name="size" class="btn rounded-full" aria-label="XL" />
+                                    </div>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details class="collapse collapse-plus">
+                            <summary class="collapse-title text-lg text-black font-bold p-3 border-t-1 border-zinc-300">
+                                Dress Style</summary>
+                            <div class="collapse-content">
+                                <ul>
+                                    <li><a>T-shirt</a></li>
+                                    <li><a>Shorts</a></li>
+                                    <li><a>Shirts</a></li>
+                                    <li><a>Hoodie</a></li>
+                                    <li><a>Jeans</a></li>
+                                </ul>
+                                <div class="mt-3">
+                                    <div class="btn btn-neutral rounded-full w-full">Apply Filter</div>
+                                </div>
+                            </div>
+                        </details>
+
+                    </div>
+                </aside>
+                <main class="col-span-3">
+                    <div class="flex justify-between items-center">
+                        <div class="font-bold text-3xl">Casual</div>
+                        <div class="text-sm text-gray-500">Showing 1-10 of 100 Products Sort by:
+                            <span>
+                                <select class="select select-sm border-0 w-30 font-bold text-black">
+                                    <option>Most Popular</option>
+                                    <option>Newest</option>
+                                    <option>Price: Low to High</option>
+                                    <option>Price: High to Low</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+                    <div id="products" class="grid grid-cols-3 gap-3 p-5">
+
+                        <div class="card w-72 hover:cursor-pointer hover:scale-105 transition">
+                            <a href="products.html">
+                                <figure>
+                                    <img src="img/product-casual/shirt-1.png" alt="Shoes" class="rounded-2xl w-full" />
+                                </figure>
+                                <div class="flex flex-col items-start gap-1 py-2">
+                                    <h2 class="card-title">T-shirt Black</h2>
+                                    <div class="flex">
+                                        <div class="rating rating-sm">
+                                            <div class="mask mask-star bg-yellow-400" aria-label="1 star"></div>
+                                            <div class="mask mask-star bg-yellow-400" aria-label="2 star"></div>
+                                            <div class="mask mask-star bg-yellow-400" aria-label="3 star"></div>
+                                            <div class="mask mask-star bg-yellow-400" aria-label="4 star"
+                                                aria-current="true"></div>
+                                            <div class="mask mask-star bg-yellow-400" aria-label="5 star"></div>
+                                        </div>
+
+                                        <div class="text-black text-sm pl-1">
+                                            4/5
+                                        </div>
+                                    </div>
+                                    <p class="font-bold text-xl">$100</p>
+                                </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+                    <section class="flex justify-between py-2">
+                        <div class="btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path fill="currentColor"
+                                    d="M20 11v2H8l5.5 5.5l-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5L8 11z" />
+                            </svg>
+                            <div>Previous</div>
+                        </div>
+                        <div class="join">
+                            <button class="join-item btn btn-active">1</button>
+                            <button class="join-item btn">2</button>
+                            <button class="join-item btn">3</button>
+                            <button class="join-item btn">4</button>
+                        </div>
+                        <div class="btn">
+                            <div>Next</div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path fill="currentColor"
+                                    d="M4 11v2h12l-5.5 5.5l1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5L16 11z" />
+                            </svg>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
