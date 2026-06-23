@@ -14,7 +14,40 @@ const products = [
             }
         ],
         category: "casual",
+    },
+    {
+        id: 2,
+        name: "Classic Hoodie",
+        price: 250,
+        colors: [
+            {
+                color: "Black",
+                image: "/img/product-casual/hoodie-black-1.png"
+            },
+            {
+                color: "White",
+                image: "/img/product-casual/hoodie-white-1.png"
+            }
+        ],
+        category: "casual",
+    },
+    {
+        id: 3,
+        name: "Essential Shirt",
+        price: 160,
+        colors: [
+            {
+                color: "Black",
+                image: "/img/product-casual/essential-shirt-black-1.png"
+            },
+            {
+                color: "White",
+                image: "/img/product-casual/essential-shirt-white-1.png"
+            }
+        ],
+        category: "casual",
     }
+    
 ]
 
 const productsContainer = document.getElementById("products")
