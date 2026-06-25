@@ -19,13 +19,35 @@
         <div class="container mx-auto">
             <nav class="flex justify-between text-center h-16 items-center font-bold px-3 lg:px-5">
                 <div class="lg:hidden flex">
-                    <button>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
-                            <path d="M0 0h24v24H0z" fill="none" />
-                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" d="M3 17h18M3 12h18M3 7h18" />
-                        </svg>
-                    </button>
+                    <div class="drawer">
+                        <input id="my-drawer-1" type="checkbox" class="drawer-toggle" />
+                        <div class="drawer-content">
+                            <label for="my-drawer-1" class="btn drawer-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                </svg>
+                            </label>
+                        </div>
+                        <div class="drawer-side">
+                            <label for="my-drawer-1" aria-label="close sidebar" class="drawer-overlay"></label>
+                            <ul class="menu bg-base-200 min-h-full w-80 p-4">
+                                <li><a href="shop.html">
+                                        Shop</a>
+                                </li>
+                                <li><a href="#">
+                                        On Sale</a>
+                                </li>
+                                <li><a href="#">
+                                        New Arivals</a>
+                                </li>
+                                <li><a href="#">
+                                        Brands</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="text-2xl">
                     <a href="#">L O G O</a>
@@ -107,9 +129,10 @@
                         <div>
                             <div class="mt-5">
                                 <a href="shop.html">
-                                <button class="btn btn-neutral rounded-full w-full lg:w-50 h-12 font-normal hover:bg-zinc-800 transition">
-                                    Shop Now
-                                </button>
+                                    <button
+                                        class="btn btn-neutral rounded-full w-full lg:w-50 h-12 font-normal hover:bg-zinc-800 transition">
+                                        Shop Now
+                                    </button>
                                 </a>
                             </div>
                         </div>
