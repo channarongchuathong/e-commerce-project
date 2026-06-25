@@ -56,7 +56,7 @@ const productsContainer = document.getElementById("products")
 products.forEach((product) => {
     productsContainer.innerHTML += `
     <div class="card w-72 hover:cursor-pointer hover:scale-105 transition">
-                    <a href="products.html">
+                    <a href="products.html?id=${product.id}">
                         <figure>
                             <img src="${product.colors[0].image}" alt="Shoes" class="rounded-2xl w-full" />
                         </figure>
@@ -82,3 +82,9 @@ products.forEach((product) => {
                 </div>
   `;
 });
+
+
+// แสดงสินค้าในหน้า products ตาม id
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
