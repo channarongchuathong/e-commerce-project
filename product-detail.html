@@ -106,24 +106,18 @@
         <div class="container mx-auto">
             <div class="grid grid-cols-12">
                 <div class="col-span-1 py-3">
-                    <div class="flex flex-col gap-3">
-                        <div class="aspect-square rounded-2xl overflow-hidden">
-                            <img src="img/product-casual/shirt-1.png" alt="รูปภาพ" class="h-full w-full object-cover">
-                        </div>
-                        <div class="aspect-square rounded-2xl overflow-hidden">
-                            <img src="img/product-casual/shirt-2.png" alt="รูปภาพ" class="h-full w-full object-cover">
-                        </div>
+                    <div id="product-imgs" class="flex flex-col gap-3">
 
                     </div>
                 </div>
                 <div class="col-span-4 p-3">
                     <div class="aspect-square rounded-2xl overflow-hidden">
-                        <img src="img/product-casual/shirt-1.png" class="w-full h-full object-cover">
+                        <img id="product-img" class="w-full h-full object-cover">
                     </div>
                 </div>
                 <div class="col-span-7 p-[20px]">
                     <div class="flex flex-col gap-3">
-                        <h1 class="text-4xl font-extrabold">T-SHIRT</h1>
+                        <h1 id="product-name" class="text-4xl font-extrabold"></h1>
                         <div class="rating gap-1">
                             <div class="mask mask-star bg-yellow-400" aria-label="1 star"></div>
                             <div class="mask mask-star bg-yellow-400" aria-label="2 star"></div>
@@ -132,12 +126,11 @@
                             <div class="mask mask-star bg-yellow-400" aria-label="5 star"></div>
                         </div>
                         <div class="flex items-center gap-3 text-2xl font-bold">
-                            <h2>$100</h2>
+                            <h2 id="product-price">$100</h2>
                             <div class="text-zinc-400 line-through">$150</div>
                             <div class="text-sm text-red-500 bg-red-100 rounded-full px-3">-33%</div>
                         </div>
-                        <p class="">Made from premium cotton for exceptional comfort and breathability.
-                            A timeless essential designed for effortless everyday style.</p>
+                        <p id="product-description"></p>
                         <div class="flex flex-col gap-2 border-t-1 border-zinc-200 py-2">
                             <div>Select Colors</div>
                             <div>
@@ -265,117 +258,117 @@
                 <div>
 
                     <div class="card w-72 hover:cursor-pointer hover:scale-105 transition">
-                            <a href="products.html">
-                                <figure>
-                                    <img src="img/product-casual/shirt-1.png" alt="Shoes" class="rounded-2xl w-full" />
-                                </figure>
-                                <div class="flex flex-col items-start gap-1 py-2">
-                                    <h2 class="card-title">T-shirt Black</h2>
-                                    <div class="flex">
-                                        <div class="rating rating-sm">
-                                            <div class="mask mask-star bg-yellow-400" aria-label="1 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="2 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="3 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="4 star"
-                                                aria-current="true"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="5 star"></div>
-                                        </div>
-
-                                        <div class="text-black text-sm pl-1">
-                                            4/5
-                                        </div>
+                        <a href="products.html">
+                            <figure>
+                                <img src="img/product-casual/shirt-1.png" alt="Shoes" class="rounded-2xl w-full" />
+                            </figure>
+                            <div class="flex flex-col items-start gap-1 py-2">
+                                <h2 class="card-title">T-shirt Black</h2>
+                                <div class="flex">
+                                    <div class="rating rating-sm">
+                                        <div class="mask mask-star bg-yellow-400" aria-label="1 star"></div>
+                                        <div class="mask mask-star bg-yellow-400" aria-label="2 star"></div>
+                                        <div class="mask mask-star bg-yellow-400" aria-label="3 star"></div>
+                                        <div class="mask mask-star bg-yellow-400" aria-label="4 star"
+                                            aria-current="true"></div>
+                                        <div class="mask mask-star bg-yellow-400" aria-label="5 star"></div>
                                     </div>
-                                    <p class="font-bold text-xl">$100</p>
+
+                                    <div class="text-black text-sm pl-1">
+                                        4/5
+                                    </div>
                                 </div>
-                            </a>
-                        </div>
+                                <p class="font-bold text-xl">$100</p>
+                            </div>
+                        </a>
+                    </div>
 
                 </div>
                 <div>
 
                     <div class="card w-72 hover:cursor-pointer hover:scale-105 transition">
-                            <a href="products.html">
-                                <figure>
-                                    <img src="img/product-casual/shirt-1.png" alt="Shoes" class="rounded-2xl w-full" />
-                                </figure>
-                                <div class="flex flex-col items-start gap-1 py-2">
-                                    <h2 class="card-title">T-shirt Black</h2>
-                                    <div class="flex">
-                                        <div class="rating rating-sm">
-                                            <div class="mask mask-star bg-yellow-400" aria-label="1 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="2 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="3 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="4 star"
-                                                aria-current="true"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="5 star"></div>
-                                        </div>
-
-                                        <div class="text-black text-sm pl-1">
-                                            4/5
-                                        </div>
+                        <a href="products.html">
+                            <figure>
+                                <img src="img/product-casual/shirt-1.png" alt="Shoes" class="rounded-2xl w-full" />
+                            </figure>
+                            <div class="flex flex-col items-start gap-1 py-2">
+                                <h2 class="card-title">T-shirt Black</h2>
+                                <div class="flex">
+                                    <div class="rating rating-sm">
+                                        <div class="mask mask-star bg-yellow-400" aria-label="1 star"></div>
+                                        <div class="mask mask-star bg-yellow-400" aria-label="2 star"></div>
+                                        <div class="mask mask-star bg-yellow-400" aria-label="3 star"></div>
+                                        <div class="mask mask-star bg-yellow-400" aria-label="4 star"
+                                            aria-current="true"></div>
+                                        <div class="mask mask-star bg-yellow-400" aria-label="5 star"></div>
                                     </div>
-                                    <p class="font-bold text-xl">$100</p>
+
+                                    <div class="text-black text-sm pl-1">
+                                        4/5
+                                    </div>
                                 </div>
-                            </a>
-                        </div>
+                                <p class="font-bold text-xl">$100</p>
+                            </div>
+                        </a>
+                    </div>
 
                 </div>
                 <div>
 
                     <div class="card w-72 hover:cursor-pointer hover:scale-105 transition">
-                            <a href="products.html">
-                                <figure>
-                                    <img src="img/product-casual/shirt-1.png" alt="Shoes" class="rounded-2xl w-full" />
-                                </figure>
-                                <div class="flex flex-col items-start gap-1 py-2">
-                                    <h2 class="card-title">T-shirt Black</h2>
-                                    <div class="flex">
-                                        <div class="rating rating-sm">
-                                            <div class="mask mask-star bg-yellow-400" aria-label="1 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="2 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="3 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="4 star"
-                                                aria-current="true"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="5 star"></div>
-                                        </div>
-
-                                        <div class="text-black text-sm pl-1">
-                                            4/5
-                                        </div>
+                        <a href="products.html">
+                            <figure>
+                                <img src="img/product-casual/shirt-1.png" alt="Shoes" class="rounded-2xl w-full" />
+                            </figure>
+                            <div class="flex flex-col items-start gap-1 py-2">
+                                <h2 class="card-title">T-shirt Black</h2>
+                                <div class="flex">
+                                    <div class="rating rating-sm">
+                                        <div class="mask mask-star bg-yellow-400" aria-label="1 star"></div>
+                                        <div class="mask mask-star bg-yellow-400" aria-label="2 star"></div>
+                                        <div class="mask mask-star bg-yellow-400" aria-label="3 star"></div>
+                                        <div class="mask mask-star bg-yellow-400" aria-label="4 star"
+                                            aria-current="true"></div>
+                                        <div class="mask mask-star bg-yellow-400" aria-label="5 star"></div>
                                     </div>
-                                    <p class="font-bold text-xl">$100</p>
+
+                                    <div class="text-black text-sm pl-1">
+                                        4/5
+                                    </div>
                                 </div>
-                            </a>
-                        </div>
+                                <p class="font-bold text-xl">$100</p>
+                            </div>
+                        </a>
+                    </div>
 
                 </div>
                 <div>
 
                     <div class="card w-72 hover:cursor-pointer hover:scale-105 transition">
-                            <a href="products.html">
-                                <figure>
-                                    <img src="img/product-casual/shirt-1.png" alt="Shoes" class="rounded-2xl w-full" />
-                                </figure>
-                                <div class="flex flex-col items-start gap-1 py-2">
-                                    <h2 class="card-title">T-shirt Black</h2>
-                                    <div class="flex">
-                                        <div class="rating rating-sm">
-                                            <div class="mask mask-star bg-yellow-400" aria-label="1 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="2 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="3 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="4 star"
-                                                aria-current="true"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="5 star"></div>
-                                        </div>
-
-                                        <div class="text-black text-sm pl-1">
-                                            4/5
-                                        </div>
+                        <a href="products.html">
+                            <figure>
+                                <img src="img/product-casual/shirt-1.png" alt="Shoes" class="rounded-2xl w-full" />
+                            </figure>
+                            <div class="flex flex-col items-start gap-1 py-2">
+                                <h2 class="card-title">T-shirt Black</h2>
+                                <div class="flex">
+                                    <div class="rating rating-sm">
+                                        <div class="mask mask-star bg-yellow-400" aria-label="1 star"></div>
+                                        <div class="mask mask-star bg-yellow-400" aria-label="2 star"></div>
+                                        <div class="mask mask-star bg-yellow-400" aria-label="3 star"></div>
+                                        <div class="mask mask-star bg-yellow-400" aria-label="4 star"
+                                            aria-current="true"></div>
+                                        <div class="mask mask-star bg-yellow-400" aria-label="5 star"></div>
                                     </div>
-                                    <p class="font-bold text-xl">$100</p>
+
+                                    <div class="text-black text-sm pl-1">
+                                        4/5
+                                    </div>
                                 </div>
-                            </a>
-                        </div>
+                                <p class="font-bold text-xl">$100</p>
+                            </div>
+                        </a>
+                    </div>
 
                 </div>
             </div>
@@ -452,7 +445,8 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="products.js"></script>
+    <script src="product-detail.js"></script>
 </body>
 
 </html>
