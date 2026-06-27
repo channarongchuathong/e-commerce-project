@@ -126,9 +126,9 @@
                             <div class="mask mask-star bg-yellow-400" aria-label="5 star"></div>
                         </div>
                         <div class="flex items-center gap-3 text-2xl font-bold">
-                            <h2 id="product-price">$100</h2>
-                            <div class="text-zinc-400 line-through">$150</div>
-                            <div class="text-sm text-red-500 bg-red-100 rounded-full px-3">-33%</div>
+                            <h2 id="product-price"></h2>
+                            <div id="product-original-price" class="text-zinc-400 line-through">$150</div>
+                            <div id="product-discount" class="text-sm text-red-500 bg-red-100 rounded-full px-3"></div>
                         </div>
                         <p id="product-description"></p>
                         <div class="flex flex-col gap-2 border-t-1 border-zinc-200 py-2">
@@ -445,8 +445,7 @@
         </div>
     </footer>
 
-    <script src="products.js"></script>
-    <script src="product-detail.js"></script>
+    <script type="module" src="./js/product-detail.js"></script>
 </body>
 
 </html>
