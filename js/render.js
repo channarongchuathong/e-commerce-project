@@ -45,3 +45,56 @@ function createProductCard(product) {
 
     return card
 }
+
+
+export function renderProductDetail(product) {
+    const productName = document.getElementById("product-name");
+    productName.textContent = product.name;
+
+    const productPrice = document.getElementById("product-price");
+    productPrice.textContent = `$${product.price}`;
+
+    const productoriginalPrice = document.getElementById("product-original-price");
+    productoriginalPrice.textContent = `$${product.originalprice}`;
+
+    const productImg = document.getElementById("product-img");
+    productImg.src = product.colors[0].images[0];
+    productImg.className = "hover:cursor-pointer" 
+
+    const productImgs = document.getElementById("product-imgs")
+
+    const productDescription = document.getElementById("product-description");
+    productDescription.textContent = product.description;
+
+    const discount =
+        ((product.originalprice - product.price) / product.originalprice) * 100;
+
+    const productDiscount = document.getElementById("product-discount")
+    productDiscount.textContent = `${Math.round(discount)}%`
+
+
+    product.colors[0].images.forEach((image) => {
+
+        const thumbnail = createThumbnail(image,productImg)
+
+        productImgs.appendChild(thumbnail)
+
+    });
+
+}
+
+function createThumbnail(image, productImg) {
+    const thumbnail = document.createElement("div")
+    thumbnail.className = "aspect-square rounded-2xl overflow-hidden hover:cursor-pointer hover:ring-1"
+
+    const img = document.createElement("img")
+    img.src = image
+    img.classList = "h-full w-full object-cover"
+    thumbnail.appendChild(img)
+
+    thumbnail.addEventListener("click", () => {
+        productImg.src = image
+    })
+
+    return thumbnail
+}
