@@ -110,11 +110,24 @@
                             </div>
                         </div>
                         <ul class="border-b-1 border-zinc-300">
-                            <li><a>T-shirt</a></li>
-                            <li><a>Shorts</a></li>
-                            <li><a>Shirts</a></li>
-                            <li><a>Hoodie</a></li>
-                            <li><a>Jeans</a></li>
+                            <li>
+                                <label class="has-checked:bg-black has-checked:text-white">
+                                    <input type="radio" name="category" value="T-Shirt" class="hidden">
+                                    T-Shirt
+                                </label>
+                            </li>
+                            <li>
+                                <label class="has-checked:bg-black has-checked:text-white">
+                                    <input type="radio" name="category" value="Hoodie" class="hidden">
+                                    Hoodie
+                                </label>
+                            </li>
+                            <li>
+                                <label class="has-checked:bg-black has-checked:text-white">
+                                    <input type="radio" name="category" value="Jeans" class="hidden">
+                                    Jeans
+                                </label>
+                            </li>
                         </ul>
 
                         <details class="collapse collapse-plus">
@@ -124,75 +137,19 @@
                             </div>
                         </details>
 
-                        <details class="collapse collapse-plus">
-                            <summary class="collapse-title text-lg text-black font-bold p-3 border-t-1 border-zinc-300">
-                                Color</summary>
-                            <div class="collapse-content">
-                                <div class="flex flex-wrap gap-2 my-2">
-                                    <button
-                                        class="hover:cursor-pointer w-7 h-7 rounded-full bg-green-500 ring-1 ring-zinc-400"></button>
-                                    <button
-                                        class="hover:cursor-pointer w-7 h-7 rounded-full bg-red-500 ring-1 ring-zinc-400"></button>
-                                    <button
-                                        class="hover:cursor-pointer w-7 h-7 rounded-full bg-yellow-500 ring-1 ring-zinc-400"></button>
-                                    <button
-                                        class="hover:cursor-pointer w-7 h-7 rounded-full bg-orange-500 ring-1 ring-zinc-400"></button>
-                                    <button
-                                        class="hover:cursor-pointer w-7 h-7 rounded-full bg-blue-500 ring-1 ring-zinc-400"></button>
-                                    <button
-                                        class="hover:cursor-pointer w-7 h-7 rounded-full bg-sky-500 ring-1 ring-zinc-400"></button>
-                                    <button
-                                        class="hover:cursor-pointer w-7 h-7 rounded-full bg-violet-500 ring-1 ring-zinc-400"></button>
-                                    <button
-                                        class="hover:cursor-pointer w-7 h-7 rounded-full bg-pink-500 ring-1 ring-zinc-400"></button>
-                                    <button
-                                        class="hover:cursor-pointer w-7 h-7 rounded-full bg-white ring-1 ring-zinc-400"></button>
-                                    <button
-                                        class="hover:cursor-pointer w-7 h-7 rounded-full bg-black ring-1 ring-zinc-400"></button>
-                                </div>
-                            </div>
-                        </details>
 
-                        <details class="collapse collapse-plus">
-                            <summary class="collapse-title text-lg text-black font-bold p-3 border-t-1 border-zinc-300">
-                                Size</summary>
-                            <div class="collapse-content">
-                                <div>
-                                    <div class="flex flex-wrap gap-2">
-                                        <input type="radio" name="size" class="btn rounded-full" aria-label="S" />
-                                        <input type="radio" name="size" class="btn rounded-full" aria-label="M" />
-                                        <input type="radio" name="size" class="btn rounded-full" aria-label="L" />
-                                        <input type="radio" name="size" class="btn rounded-full" aria-label="XL" />
-                                    </div>
-                                </div>
-                            </div>
-                        </details>
 
-                        <details class="collapse collapse-plus">
-                            <summary class="collapse-title text-lg text-black font-bold p-3 border-t-1 border-zinc-300">
-                                Dress Style</summary>
-                            <div class="collapse-content">
-                                <ul>
-                                    <li><a>T-shirt</a></li>
-                                    <li><a>Shorts</a></li>
-                                    <li><a>Shirts</a></li>
-                                    <li><a>Hoodie</a></li>
-                                    <li><a>Jeans</a></li>
-                                </ul>
-                                <div class="mt-3">
-                                    <div class="btn btn-neutral rounded-full w-full">Apply Filter</div>
-                                </div>
-                            </div>
-                        </details>
+                        
+
 
                     </div>
                 </aside>
                 <main class="col-span-3">
                     <div class="flex justify-between items-center">
-                        <div class="font-bold text-3xl">Casual</div>
+                        <div class="font-bold text-3xl">Products</div>
                         <div class="text-sm text-gray-500">Showing 1-10 of 100 Products Sort by:
                             <span>
-                                <select class="select select-sm border-0 w-30 font-bold text-black">
+                                <select class="select select-sm border-0 w-auto font-bold text-black">
                                     <option>Most Popular</option>
                                     <option>Newest</option>
                                     <option>Price: Low to High</option>
@@ -203,7 +160,7 @@
                     </div>
                     <div id="products-list" class="grid grid-cols-2 lg:grid-cols-3 gap-5 p-5">
 
-                        
+
 
 
                     </div>

@@ -15,6 +15,20 @@ searchInput.addEventListener("input", () => {
     const result = products.filter((product) => {
         return product.name.toLowerCase().includes(searchText)
     })
-    renderProducts(result,productsContainer)
+    renderProducts(result, productsContainer)
 })
 
+
+const categoryRadio = document.querySelectorAll('input[name="category"]')
+
+categoryRadio.forEach((radio) => {
+
+    radio.addEventListener("change", () => {
+        const selectRadio = radio.value
+
+        const result = products.filter((product) => {
+            return product.category == selectRadio
+        })
+        renderProducts(result,productsContainer)
+    })
+})

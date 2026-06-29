@@ -21,7 +21,7 @@ export const products = [
                 ]
             }
         ],
-        category: "casual",
+        category: "T-Shirt",
     },
     {
         id: 2,
@@ -45,7 +45,7 @@ export const products = [
                 ]
             }
         ],
-        category: "casual",
+        category: "Hoodie",
     },
     {
         id: 3,
@@ -69,7 +69,7 @@ export const products = [
                 ]
             }
         ],
-        category: "casual",
+        category: "T-Shirt",
     }
 
 ]
