@@ -22,6 +22,9 @@ export const products = [
             }
         ],
         category: "T-Shirt",
+
+        createdAt: "2026-06-20",
+        sold: 500
     },
     {
         id: 2,
@@ -46,6 +49,9 @@ export const products = [
             }
         ],
         category: "Hoodie",
+
+        createdAt: "2026-07-01",
+        sold: 90
     },
     {
         id: 3,
@@ -70,6 +76,9 @@ export const products = [
             }
         ],
         category: "T-Shirt",
+
+        createdAt: "2026-06-25",
+        sold: 120
     }
 
 ]

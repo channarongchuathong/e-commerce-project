@@ -3,19 +3,56 @@ import { renderProducts } from "./render.js";
 
 const productsContainer = document.getElementById("products-list")
 
-renderProducts(products, productsContainer);
 
 
-// ค้นหาสินค้า
-const searchInput = document.getElementById("search-input")
-searchInput.addEventListener("input", () => {
 
-    const searchText = searchInput.value.toLowerCase()
 
-    const result = products.filter((product) => {
+let searchText = "";
+let selectedCategory = "all";
+let sortType = "popular";
+applyFilters();
+
+function applyFilters() {
+    let result = products
+
+    result = result.filter((product) => {
         return product.name.toLowerCase().includes(searchText)
     })
+
+    if (selectedCategory != "all") {
+        result = result.filter((product) => {
+            return product.category == selectedCategory
+        })
+    }
+
+    if (sortType == "popular") {
+        result.sort((a, b) => {
+            return b.sold - a.sold
+        })
+    } else if (sortType == "newest") {
+        result.sort((a, b) => {
+            return new Date(b.createdAt) - new Date(a.createdAt)
+        })
+    } else if (sortType == "price-low") {
+        result.sort((a, b) => {
+            return a.price - b.price
+        })
+    } else if (sortType == "price-high") {
+        result.sort((a, b) => {
+            return b.price - a.price
+        })
+    }
+
     renderProducts(result, productsContainer)
+}
+
+const searchInput = document.getElementById("search-input")
+
+searchInput.addEventListener("input", () => {
+
+    searchText = searchInput.value.toLowerCase()
+
+    applyFilters()
 })
 
 
@@ -24,11 +61,17 @@ const categoryRadio = document.querySelectorAll('input[name="category"]')
 categoryRadio.forEach((radio) => {
 
     radio.addEventListener("change", () => {
-        const selectRadio = radio.value
+        selectedCategory = radio.value
 
-        const result = products.filter((product) => {
-            return product.category == selectRadio
-        })
-        renderProducts(result,productsContainer)
+        applyFilters()
     })
 })
+
+
+const sortSelect = document.getElementById("sort")
+sortSelect.addEventListener("change", () => {
+    sortType = sortSelect.value
+
+    applyFilters()
+})
+
