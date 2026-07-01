@@ -59,7 +59,7 @@ export function renderProductDetail(product) {
 
     const productImg = document.getElementById("product-img");
     productImg.src = product.colors[0].images[0];
-    productImg.className = "hover:cursor-pointer" 
+    productImg.className = "hover:cursor-pointer"
 
     const productImgs = document.getElementById("product-imgs")
 
@@ -75,11 +75,12 @@ export function renderProductDetail(product) {
 
     product.colors[0].images.forEach((image) => {
 
-        const thumbnail = createThumbnail(image,productImg)
+        const thumbnail = createThumbnail(image, productImg)
 
         productImgs.appendChild(thumbnail)
 
     });
+
 
 }
 
@@ -97,4 +98,53 @@ function createThumbnail(image, productImg) {
     })
 
     return thumbnail
+}
+
+
+const colorContainer = document.getElementById("product-colors")
+export function createButtonColors(product) {
+    product.colors.forEach((color, index) => {
+
+        const label = document.createElement("label")
+        label.style.backgroundColor = color.value;
+        label.className = "btn btn-xs btn-circle border-1 border-zinc-300 has-checked:ring-1 has-checked:ring-offset-2"
+
+        const input = document.createElement("input")
+        input.type = "radio"
+        input.name = "color"
+        input.className = "hidden"
+        input.value = color.name
+
+        label.appendChild(input)
+
+        colorContainer.appendChild(label)
+        if (index == 0) {
+            input.checked = true;
+        }
+
+        const productImg = document.getElementById("product-img")
+        const productImgs = document.getElementById("product-imgs")
+
+        label.addEventListener("change", () => {
+
+            productImgs.innerHTML = ""
+            
+            const selectedColor = input.value
+
+            const selectedColorData = product.colors.find((color) => {
+                return selectedColor == color.name
+            })
+
+            productImg.src = selectedColorData.images[0];
+
+            selectedColorData.images.forEach((image) => {
+                const thumbnail = createThumbnail(image,productImg)
+
+                productImgs.appendChild(thumbnail)
+            })
+        })
+
+
+
+    })
 }

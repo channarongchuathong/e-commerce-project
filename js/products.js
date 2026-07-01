@@ -5,24 +5,28 @@ export const products = [
         price: 100,
         originalprice: 150,
         description: "Made with high-quality cotton and a clean, modern silhouette, the Classic T-Shirt delivers effortless comfort and timeless style. Designed to pair seamlessly with any outfit, it's an essential piece for everyday wear.",
+
         colors: [
             {
-                color: "Black",
+                name: "black",
+                value: "#000000",
                 images: [
                     "/img/product-casual/t-shirt-black-1.png",
                     "/img/product-casual/t-shirt-black-2.png"
                 ]
             },
             {
-                color: "White",
+                name: "white",
+                value: "#FFFFFF",
                 images: [
                     "/img/product-casual/t-shirt-white-1.png",
                     "/img/product-casual/t-shirt-white-2.png"
                 ]
-            }
+            },
         ],
-        category: "T-Shirt",
 
+
+        category: "T-Shirt",
         createdAt: "2026-06-20",
         sold: 500
     },
@@ -32,24 +36,27 @@ export const products = [
         price: 250,
         originalprice: 350,
         description: "Made from high-quality fabric with a soft interior, the Classic Hoodie delivers lasting comfort and a relaxed fit. Designed for versatility, it pairs effortlessly with any casual wardrobe.",
+
         colors: [
             {
-                color: "Black",
+                name: "black",
+                value: "#000000",
                 images: [
                     "/img/product-casual/hoodie-black-1.png",
                     "/img/product-casual/hoodie-black-2.png"
                 ]
             },
             {
-                color: "White",
+                name: "white",
+                value: "#FFFFFF",
                 images: [
                     "/img/product-casual/hoodie-white-1.png",
                     "/img/product-casual/hoodie-white-2.png"
                 ]
             }
         ],
-        category: "Hoodie",
 
+        category: "Hoodie",
         createdAt: "2026-07-01",
         sold: 90
     },
@@ -59,24 +66,27 @@ export const products = [
         price: 160,
         originalprice: 200,
         description: "The Essential Shirt is crafted from premium fabric for exceptional comfort and a refined look. Designed with a clean silhouette and versatile fit, it's the perfect choice for both casual and smart-casual occasions.",
+
         colors: [
             {
-                color: "Black",
+                name: "black",
+                value: "#000000",
                 images: [
                     "/img/product-casual/essential-shirt-black-1.png",
                     "/img/product-casual/essential-shirt-black-2.png"
                 ]
             },
             {
-                color: "White",
+                name: "white",
+                value: "#FFFFFF",
                 images: [
                     "/img/product-casual/essential-shirt-white-1.png",
                     "/img/product-casual/essential-shirt-white-2.png"
                 ]
             }
         ],
-        category: "T-Shirt",
 
+        category: "T-Shirt",
         createdAt: "2026-06-25",
         sold: 120
     }

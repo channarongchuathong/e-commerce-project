@@ -1,5 +1,5 @@
 import { products } from "./products.js";
-import { renderProductDetail } from "./render.js";
+import { createButtonColors, renderProductDetail } from "./render.js";
 
 // แสดง url ตามสินค้าที่เลือกด้วย id
 
@@ -13,6 +13,8 @@ const product = products.find((product) => {
 });
 
 renderProductDetail(product)
+
+createButtonColors(product)
 
 
 
