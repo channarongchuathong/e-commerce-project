@@ -16,6 +16,8 @@ renderProductDetail(product)
 
 createButtonColors(product)
 
+const selectedSize = document.querySelectorAll(input[name = "size"])
+
 
 let quantity = 1
 
@@ -54,6 +56,30 @@ renderQuantity()
 setupQuantityEvents()
 
 
+
+// ระบบสินค้า
+
+const cart = []
+
+function addToCart() {
+
+    const existingItem = cart.find((item) => {
+        return item.id === product.id && item.color === selectedColor && item.size === selectedSize
+    })
+
+    if (existingItem) {
+        existingItem.quantity += quantity
+    } else {
+        cart.push(
+            {
+                id: product.id,
+                color: selectedColor,
+                size: selectedSize,
+                quantity: quantity
+            }
+        )
+    }
+}
 
 
 
