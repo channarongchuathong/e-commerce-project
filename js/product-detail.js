@@ -11,7 +11,7 @@ const product = products.find((product) => {
     return product.id == id;
 });
 
-let selectedColor = "input.value"
+let selectedColor = ""
 let selectedSize = ""
 let quantity = 1
 
@@ -88,6 +88,7 @@ function createButtonColors(product) {
         colorContainer.appendChild(label)
         if (index == 0) {
             input.checked = true;
+            selectedColor = color.name;
         }
 
         const productImg = document.getElementById("product-img")
@@ -163,7 +164,7 @@ function setupQuantityEvents() {
 renderQuantity()
 setupQuantityEvents()
 
-let cart = []
+let cart = JSON.parse(localStorage.getItem("cart")) || []
 
 function addToCart(product, selectedColor, selectedSize, quantity) {
     
@@ -183,6 +184,8 @@ function addToCart(product, selectedColor, selectedSize, quantity) {
             }
         )
     }
+    localStorage.setItem("cart",JSON.stringify(cart))
+    
 }
 
 const addToCartButton = document.getElementById("addToCart")
