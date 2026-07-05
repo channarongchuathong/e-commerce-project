@@ -3,10 +3,6 @@ import { renderProducts } from "./render.js";
 
 const productsContainer = document.getElementById("products-list")
 
-
-
-
-
 let searchText = "";
 let selectedCategory = "all";
 let sortType = "popular";

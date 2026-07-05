@@ -1,4 +1,5 @@
-import { products } from "./products";
+import { products } from "./products.js";
+
 
 export function renderProducts(productList, container) {
 
@@ -48,110 +49,10 @@ function createProductCard(product) {
 }
 
 
-export function renderProductDetail(product) {
-    const productName = document.getElementById("product-name");
-    productName.textContent = product.name;
-
-    const productPrice = document.getElementById("product-price");
-    productPrice.textContent = `$${product.price}`;
-
-    const productoriginalPrice = document.getElementById("product-original-price");
-    productoriginalPrice.textContent = `$${product.originalprice}`;
-
-    const productImg = document.getElementById("product-img");
-    productImg.src = product.colors[0].images[0];
-    productImg.className = "hover:cursor-pointer"
-
-    const productImgs = document.getElementById("product-imgs")
-
-    const productDescription = document.getElementById("product-description");
-    productDescription.textContent = product.description;
-
-    const discount =
-        ((product.originalprice - product.price) / product.originalprice) * 100;
-
-    const productDiscount = document.getElementById("product-discount")
-    productDiscount.textContent = `${Math.round(discount)}%`
 
 
-    product.colors[0].images.forEach((image) => {
-
-        const thumbnail = createThumbnail(image, productImg)
-
-        productImgs.appendChild(thumbnail)
-
-    });
-
-
-}
-
-function createThumbnail(image, productImg) {
-    const thumbnail = document.createElement("div")
-    thumbnail.className = "aspect-square rounded-2xl overflow-hidden hover:cursor-pointer hover:ring-1"
-
-    const img = document.createElement("img")
-    img.src = image
-    img.classList = "h-full w-full object-cover"
-    thumbnail.appendChild(img)
-
-    thumbnail.addEventListener("click", () => {
-        productImg.src = image
-    })
-
-    return thumbnail
-}
-
-
-const colorContainer = document.getElementById("product-colors")
-export function createButtonColors(product) {
-    product.colors.forEach((color, index) => {
-
-        const label = document.createElement("label")
-        label.style.backgroundColor = color.value;
-        label.className = "btn btn-xs btn-circle border-1 border-zinc-300 has-checked:ring-1 has-checked:ring-offset-2"
-
-        const input = document.createElement("input")
-        input.type = "radio"
-        input.name = "color"
-        input.className = "hidden"
-        input.value = color.name
-
-        label.appendChild(input)
-
-        colorContainer.appendChild(label)
-        if (index == 0) {
-            input.checked = true;
-        }
-
-        const productImg = document.getElementById("product-img")
-        const productImgs = document.getElementById("product-imgs")
-
-        label.addEventListener("change", () => {
-
-            productImgs.innerHTML = ""
-
-            const selectedColor = input.value
-
-            const selectedColorData = product.colors.find((color) => {
-                return selectedColor == color.name
-            })
-
-            productImg.src = selectedColorData.images[0];
-
-            selectedColorData.images.forEach((image) => {
-                const thumbnail = createThumbnail(image, productImg)
-
-                productImgs.appendChild(thumbnail)
-            })
-        })
-
-
-
-    })
-}
-
-
-function renderCart(container) {
+const cartContainer = document.getElementById("cartContainer")
+export function renderCart(Cart) {
 
     container.innerHTML = ""
 
@@ -200,14 +101,22 @@ function renderCart(container) {
                             </div>
                         </div>`;
 
-        container.appendChild(cartCard)
+        cartContainer.appendChild(cartCard)
 
         const increaseButton = cartCard.querySelector('[data-action="increase"]')
+        const decreaseButton = cartCard.querySelector('[data-action="decrease"]')
+        const deleteButton = cartCard.querySelector('[data-action="delete"]')
+
         increaseButton.addEventListener("click", () => {
             changeCartQuantity(cartItem, "increase")
         })
-        const decreaseButton = cartCard.querySelector('[data-action="decrease"]')
-        const deleteButton = cartCard.querySelector('[data-action="delete"]')
+        decreaseButton.addEventListener("click", () => {
+            changeCartQuantity(cartItem, "decrease")
+        })
+        deleteButton.addEventListener("click", () => {
+            changeCartQuantity(cartItem, "delete")
+        })
+
     })
 }
 
@@ -216,16 +125,19 @@ function changeCartQuantity(cartItem, action) {
     if (action === "increase") {
         cartItem.quantity++
     } else if (action === "decrease") {
-        cartItem.quantity--
+        if (cartItem.quantity > 1) {
+            cartItem.quantity--
+        }
     } else if (action === "delete") {
-        Cart.filter((item) => {
-           return !(
-            item.id === cartItem.id &&
-            item.color === cartItem.color &&
-            item.size === cartItem.size
-           )
+        cart = cart.filter((item) => {
+            return !(
+                item.id === cartItem.id &&
+                item.color === cartItem.color &&
+                item.size === cartItem.size
+            )
         })
     }
+    renderCart(cart)
 
 }
 
