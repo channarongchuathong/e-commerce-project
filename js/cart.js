@@ -20,7 +20,7 @@ export function renderCart(cart, cartContainer) {
         })
 
         const cartCard = document.createElement("div")
-        cartCard.className = "flex p-[20px]"
+        cartCard.className = "flex py-[20px]"
         cartCard.innerHTML = ` <div class="rounded-lg overflow-hidden">
                                 <img src="${selectedColor.images[0]}" alt="" class="w-35 h-40 object-cover">
                             </div>
@@ -140,4 +140,25 @@ calculateCart()
 const promoCode = document.getElementById("promo-apply")
 promoCode.addEventListener("click", () => {
     alert("คุณไม่มีคูปองส่วนลด")
+})
+
+
+const checkoutBtn = document.getElementById("checkoutBtn")
+const placeOrderBtn = document.getElementById("placeOrder")
+const checkoutContainer = document.getElementById("checkoutContainer")
+
+checkoutBtn.addEventListener(("click"),()=>{
+    cartContainer.classList.add("hidden")
+    checkoutContainer.classList.remove("hidden")
+
+    checkoutBtn.classList.add("hidden")
+    placeOrderBtn.classList.remove("hidden")
+})
+
+placeOrderBtn.addEventListener(("click"),()=>{
+    alert("Order Success!")
+
+    localStorage.removeItem("cart")
+    
+    window.location.href = "shop.html"
 })
