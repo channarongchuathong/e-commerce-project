@@ -116,29 +116,25 @@
                     <div class="flex flex-col gap-5 p-[20px] border-1 rounded-2xl">
                         <h2 class="text-xl font-bold">Order Summary</h2>
                         <div>
-                            <div class="flex justify-between">
-                                <p>Subtotal</p>
-                                <p>$150</p>
+                            <div id="cart-order">
+                                
                             </div>
+                           
                             <div class="flex justify-between">
-                                <p>Discount (-33%)</p>
-                                <p>-$50</p>
-                            </div>
-                            <div class="flex justify-between">
-                                <p>Delivery Free</p>
+                                <p class="font-bold">Delivery Free</p>
                                 <p>$0</p>
                             </div>
-                            <div class="border-t-1">
-                                <div class="flex justify-between">
+                            <div class="border-t-1 mt-2 pt-2">
+                                <div class="flex justify-between font-bold">
                                     <p>Total</p>
-                                    <p>$100</p>
+                                    <p id="total"></p>
                                 </div>
                             </div>
                         </div>
                         <div class="flex justify-between gap-2 items-center">
                             <input type="text" placeholder="Add promo code"
                                 class="rounded-full p-2 px-5 w-full border-none bg-zinc-200">
-                            <div class="btn btn-neutral rounded-full">Apply</div>
+                            <div id="promo-apply" class="btn btn-neutral rounded-full">Apply</div>
                         </div>
                         <div>
                             <div class="btn btn-neutral rounded-full w-full">Go to Check out</div>

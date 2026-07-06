@@ -13,11 +13,12 @@ export function renderCart(cart, cartContainer) {
         const product = products.find((product) => {
             return product.id === cartItem.id
         })
- 
+
+
         const selectedColor = product.colors.find((color) => {
             return color.name === cartItem.color
         })
-        
+
         const cartCard = document.createElement("div")
         cartCard.className = "flex p-[20px]"
         cartCard.innerHTML = ` <div class="rounded-lg overflow-hidden">
@@ -95,8 +96,48 @@ function changeCartQuantity(cartItem, action) {
     localStorage.setItem("cart", JSON.stringify(cart)
     )
     renderCart(cart, cartContainer)
+    calculateCart()
 
 }
 
 
 renderCart(cart, cartContainer)
+const totalContainer = document.getElementById("total")
+
+const order = document.getElementById("cart-order")
+
+function calculateCart() {
+    order.innerHTML = ""
+    let total = 0
+
+    cart.forEach((cartItem) => {
+        const product = products.find((product) => {
+            return product.id === cartItem.id
+        })
+
+        const itemTotal = product.price * cartItem.quantity
+
+        order.innerHTML += ` <div class="flex justify-between mb-1">
+                                    <div class="font-bold">${product.name}
+                                        <div class="font-normal">
+                                            $${product.price} × ${cartItem.quantity}
+                                        </div>
+                                    </div>
+                                    <p>$${itemTotal}</p>
+                                </div>`
+
+        total += itemTotal
+
+
+    })
+    const totalContainer = document.getElementById("total")
+    totalContainer.textContent = `$${total}`
+
+}
+
+calculateCart()
+
+const promoCode = document.getElementById("promo-apply")
+promoCode.addEventListener("click", () => {
+    alert("คุณไม่มีคูปองส่วนลด")
+})
