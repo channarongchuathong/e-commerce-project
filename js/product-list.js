@@ -4,7 +4,7 @@ import { renderProducts } from "./render.js";
 const productsContainer = document.getElementById("products-list")
 
 let searchText = "";
-let selectedCategory = "all";
+let selectedCategory = "All";
 let sortType = "popular";
 applyFilters();
 
@@ -15,7 +15,7 @@ function applyFilters() {
         return product.name.toLowerCase().includes(searchText)
     })
 
-    if (selectedCategory != "all") {
+    if (selectedCategory != "All") {
         result = result.filter((product) => {
             return product.category == selectedCategory
         })
@@ -53,12 +53,19 @@ searchInput.addEventListener("input", () => {
 
 
 const categoryRadio = document.querySelectorAll('input[name="category"]')
+const titleProducts = document.getElementById("title-products")
 
 categoryRadio.forEach((radio) => {
 
     radio.addEventListener("change", () => {
         selectedCategory = radio.value
 
+        if (radio.value == "All") {
+            titleProducts.textContent = "Products"
+        } else {
+            titleProducts.textContent = radio.value
+        }
+        
         applyFilters()
     })
 })

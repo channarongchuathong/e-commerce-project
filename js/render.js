@@ -40,7 +40,7 @@ function createProductCard(product) {
     detailCard.appendChild(productName)
 
     const productPrice = document.createElement("p")
-    productPrice.className = "font-bold text-xl"
+    productPrice.className = "font-bold text-sm lg:text-xl"
     productPrice.textContent = `$${product.price}`
 
     detailCard.appendChild(productPrice)

@@ -1,4 +1,5 @@
 import { products } from "./products.js";
+import { renderProducts } from "./render.js";
 
 // แสดง url ตามสินค้าที่เลือกด้วย id
 
@@ -39,6 +40,9 @@ function renderProductDetail(product) {
 
     const productDiscount = document.getElementById("product-discount")
     productDiscount.textContent = `${Math.round(discount)}%`
+
+    const breadcrumbsProductName = document.getElementById("breadcrumbs-product-name")
+    breadcrumbsProductName.innerText = product.name
 
 
     product.colors[0].images.forEach((image) => {
@@ -167,7 +171,7 @@ setupQuantityEvents()
 let cart = JSON.parse(localStorage.getItem("cart")) || []
 
 function addToCart(product, selectedColor, selectedSize, quantity) {
-    
+
     const existingItem = cart.find((item) => {
         return item.id === product.id && item.color === selectedColor && item.size === selectedSize
     })
@@ -184,8 +188,8 @@ function addToCart(product, selectedColor, selectedSize, quantity) {
             }
         )
     }
-    localStorage.setItem("cart",JSON.stringify(cart))
-    
+    localStorage.setItem("cart", JSON.stringify(cart))
+
 }
 
 const addToCartButton = document.getElementById("addToCart")
@@ -195,8 +199,15 @@ addToCartButton.addEventListener("click", () => {
 
 
 
+const recommendProducts = products.filter((item) => {
+    return item.id != product.id
+})
 
+const recommendProductsRender = recommendProducts.slice(0,4)
 
+const recommendProductsContainer = document.getElementById("recommendProducts")
+
+renderProducts(recommendProductsRender,recommendProductsContainer)
 
 
 

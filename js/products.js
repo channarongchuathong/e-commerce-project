@@ -26,7 +26,7 @@ export const products = [
         ],
 
 
-        category: "T-Shirt",
+        category: "Shirt",
         createdAt: "2026-06-20",
         sold: 500
     },
@@ -86,9 +86,83 @@ export const products = [
             }
         ],
 
-        category: "T-Shirt",
+        category: "Shirt",
         createdAt: "2026-06-25",
         sold: 120
+    },
+    {
+        id: 4,
+        name: "Essential Blazer",
+        price: 320,
+        originalprice: 350,
+        description: "Crafted with premium fabric and a tailored fit, the Essential Blazer delivers timeless elegance and all-day comfort. Perfect for business meetings, formal occasions, or elevating your everyday style.",
+
+        colors: [
+            {
+                name: "black",
+                value: "#000000",
+                images: [
+                    "/img/product-formal/essential-blazer-black-1.png",
+                    "/img/product-formal/essential-blazer-black-2.png",
+                ]
+            },
+        ],
+
+        category: "Shirt",
+        createdAt: "2026-07-08",
+        sold: 152
+    },
+    {
+        id: 5,
+        name: "Performance T-Shirt",
+        price: 120,
+        originalprice: 150,
+        description: "The Performance T-Shirt is made from lightweight, moisture-wicking fabric to keep you cool, dry, and comfortable during every workout. Designed with a flexible fit and breathable construction, it's the perfect choice for training, running, or everyday active wear.",
+
+        colors: [
+            {
+                name: "black",
+                value: "#000000",
+                images: [
+                    "/img/product-gym/perfomance-t-shirt-1.png",
+                    "/img/product-gym/perfomance-t-shirt-2.png",
+                ]
+            },
+        ],
+
+        category: "Shirt",
+        createdAt: "2026-07-08",
+        sold: 90
+    },
+    {
+        id: 6,
+        name: "Classic Jeans",
+        price: 180,
+        originalprice: 220,
+        description: "Crafted from durable premium denim, the Classic Jeans offer lasting comfort and a timeless straight-fit silhouette. Designed for effortless everyday styling, they pair perfectly with any wardrobe essential.",
+
+        colors: [
+            {
+                name: "black",
+                value: "#000000",
+                images: [
+                    "/img/product-casual/classic-jean-1.png",
+                    "/img/product-casual/classic-jean-2.png",
+                ]
+            },
+            {
+                name: "light blue",
+                value: "#9BB9D9",
+                images: [
+                    "/img/product-casual/classic-jean-light-blue-1.png",
+                    "/img/product-casual/classic-jean-light-blue-2.png",
+                ]
+            }
+        ],
+
+        category: "Jeans",
+        createdAt: "2026-07-08",
+        sold: 90
     }
 
 ]

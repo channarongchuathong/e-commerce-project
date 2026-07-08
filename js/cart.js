@@ -1,13 +1,31 @@
 import { products } from "./products.js"
 
-let cart = JSON.parse(localStorage.getItem("cart") || [])
+let cart = JSON.parse(localStorage.getItem("cart")) || []
 
-
+const checkoutBtn = document.getElementById("checkoutBtn")
+const placeOrderBtn = document.getElementById("placeOrder")
+const checkoutContainer = document.getElementById("checkoutContainer")
 
 const cartContainer = document.getElementById("cartContainer")
 export function renderCart(cart, cartContainer) {
 
+
     cartContainer.innerHTML = ""
+
+
+    if (cart.length === 0) {
+
+        cartContainer.innerHTML = `
+        <div class="h-50 flex justify-center items-center p-4">
+            <div>
+            Your cart is empty Looks like you haven't added any items yet.
+            </div>
+        </div>`
+
+        checkoutBtn.disabled = true
+        return
+    }
+
 
     cart.forEach((cartItem) => {
         const product = products.find((product) => {
@@ -118,7 +136,7 @@ function calculateCart() {
         const itemTotal = product.price * cartItem.quantity
 
         order.innerHTML += ` <div class="flex justify-between mb-1">
-                                    <div class="font-bold">${product.name}
+                                    <div class="font-bold">${product.name} Size ${cartItem.size}
                                         <div class="font-normal">
                                             $${product.price} × ${cartItem.quantity}
                                         </div>
@@ -143,11 +161,8 @@ promoCode.addEventListener("click", () => {
 })
 
 
-const checkoutBtn = document.getElementById("checkoutBtn")
-const placeOrderBtn = document.getElementById("placeOrder")
-const checkoutContainer = document.getElementById("checkoutContainer")
 
-checkoutBtn.addEventListener(("click"),()=>{
+checkoutBtn.addEventListener(("click"), () => {
     cartContainer.classList.add("hidden")
     checkoutContainer.classList.remove("hidden")
 
@@ -155,10 +170,10 @@ checkoutBtn.addEventListener(("click"),()=>{
     placeOrderBtn.classList.remove("hidden")
 })
 
-placeOrderBtn.addEventListener(("click"),()=>{
+placeOrderBtn.addEventListener(("click"), () => {
     alert("Order Success!")
 
     localStorage.removeItem("cart")
-    
+
     window.location.href = "shop.html"
 })
