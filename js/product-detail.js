@@ -1,5 +1,7 @@
+
 import { products } from "./products.js";
 import { renderProducts } from "./render.js";
+import { setupSearch } from "./seach.js";
 
 // แสดง url ตามสินค้าที่เลือกด้วย id
 
@@ -43,6 +45,9 @@ function renderProductDetail(product) {
 
     const breadcrumbsProductName = document.getElementById("breadcrumbs-product-name")
     breadcrumbsProductName.innerText = product.name
+
+    const productDetailTab = document.getElementById("product-detail")
+    productDetailTab.innerHTML = product.description
 
 
     product.colors[0].images.forEach((image) => {
@@ -209,5 +214,4 @@ const recommendProductsContainer = document.getElementById("recommendProducts")
 
 renderProducts(recommendProductsRender,recommendProductsContainer)
 
-
-
+setupSearch()

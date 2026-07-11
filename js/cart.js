@@ -1,4 +1,5 @@
 import { products } from "./products.js"
+import { setupSearch } from "./seach.js"
 
 let cart = JSON.parse(localStorage.getItem("cart")) || []
 
@@ -177,3 +178,6 @@ placeOrderBtn.addEventListener(("click"), () => {
 
     window.location.href = "shop.html"
 })
+
+
+setupSearch()

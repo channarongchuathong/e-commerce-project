@@ -1,5 +1,6 @@
 import { products } from "./products.js";
 import { createProductCard, renderProducts } from "./render.js";
+import { setupSearch } from "./seach.js";
 
 const bestSellerContainer = document.getElementById("bestSellerContainer")
 const newArrivalsContainer = document.getElementById("newArrivals")
@@ -78,3 +79,10 @@ nextBest.addEventListener("click", () => {
         behavior: "smooth"
     })
 })
+
+
+//// ค้นหาไปหน้า shop
+
+
+
+setupSearch()

@@ -15,32 +15,47 @@
 </head>
 
 <body>
-    <header>
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md">
         <div class="container mx-auto">
             <nav class="flex justify-between text-center h-16 items-center font-bold px-3 lg:px-5">
                 <div class="lg:hidden flex">
-                    <button>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
-                            <path d="M0 0h24v24H0z" fill="none" />
-                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" d="M3 17h18M3 12h18M3 7h18" />
-                        </svg>
-                    </button>
+                    <div class="drawer">
+                        <input id="my-drawer-1" type="checkbox" class="drawer-toggle" />
+                        <div class="drawer-content">
+                            <label for="my-drawer-1" class="btn drawer-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                </svg>
+
+                            </label>
+                        </div>
+                        <div class="drawer-side">
+                            <label for="my-drawer-1" aria-label="close sidebar" class="drawer-overlay"></label>
+                            <ul class="menu bg-base-200 min-h-full w-50 p-4">
+                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="brands.html">Brands</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="text-2xl">
-                    <a href="#">L O G O</a>
+                    <a href="index.html">L O G O</a>
                 </div>
                 <ul class="hidden lg:flex gap-6">
-                    <li><a href="#" class="border-b-2 border-transparent hover:border-black transition duration-300">
+                    <li><a href="shop.html"
+                            class="border-b-2 border-transparent hover:border-black transition duration-300">
                             Shop</a>
                     </li>
-                    <li><a href="#" class="border-b-2 border-transparent hover:border-black transition duration-300">
+                    <li><a href="shop.html" class="border-b-2 border-transparent hover:border-black transition duration-300">
                             On Sale</a>
                     </li>
-                    <li><a href="#" class="border-b-2 border-transparent hover:border-black transition duration-300">
+                    <li><a href="shop.html" class="border-b-2 border-transparent hover:border-black transition duration-300">
                             New Arivals</a>
                     </li>
-                    <li><a href="#" class="border-b-2 border-transparent hover:border-black transition duration-300">
+                    <li><a href="brands.html"
+                            class="border-b-2 border-transparent hover:border-black transition duration-300">
                             Brands</a>
                     </li>
                 </ul>
@@ -66,7 +81,8 @@
                     </div>
                     <div>
                         <a href="cart.html">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <svg class="hover:text-zinc-500" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                viewBox="0 0 24 24">
                                 <path d="M0 0h24v24H0z" fill="none" />
                                 <path fill="currentColor"
                                     d="M21 6H7.05L5.94 2.68A1 1 0 0 0 4.99 2h-3v2h2.28l3.54 10.63A2 2 0 0 0 9.71 16h7.59a2 2 0 0 0 1.87-1.3l2.76-7.35c.11-.31.07-.65-.11-.92A1 1 0 0 0 21 6m-3.69 8H9.72l-2-6h11.84zM10 18a2 2 0 1 0 0 4a2 2 0 1 0 0-4m7 0a2 2 0 1 0 0 4a2 2 0 1 0 0-4" />
@@ -74,8 +90,9 @@
                         </a>
                     </div>
                     <div>
-                        <a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+                        <a href="login.html">
+                            <svg class="hover:text-zinc-500" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                viewBox="0 0 16 16">
                                 <path d="M0 0h16v16H0z" fill="none" />
                                 <path fill="currentColor"
                                     d="M11 7c0 1.66-1.34 3-3 3S5 8.66 5 7s1.34-3 3-3s3 1.34 3 3" />
@@ -89,83 +106,82 @@
             </nav>
         </div>
     </header>
-    <div>
-        <div class="container mx-auto">
-            <div class="breadcrumbs text-sm border-t-1 border-zinc-300 py-[20px]">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li>Brands</li>
-                </ul>
+    <main>
+        <div>
+            <div class="container mx-auto  px-3 lg:px-2">
+                <div class="breadcrumbs text-sm border-t-1 border-zinc-300 py-[20px]">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li>Brands</li>
+                    </ul>
+                </div>
+                <section class="h-120">
+                    <div class="bg-[url(/img/brands-page.png)] bg-cover lg:bg-[50%_center] h-full rounded-xl">
+                        <div class="w-full lg:w-[60%] xl:w-[40%] h-full flex flex-col justify-center px-10 lg:pl-20">
+                            <p class="font-semibold">BRAND STORY</p>
+                            <h1 class="text-4xl font-bold py-8">SIMPLE. TIMELESS.<br>MADE TO LAST.</h1>
+                            <p class="font-semibold">We believe that true style comes from simplicity.
+                                MONO creates high-quality essentials with a focus on clean design, comfort, and durability.
+                                Pieces that you can wear, every day. For years.</p>
+                            <div class="mt-8">
+                                <div>
+                                    <a href="shop.html">
+                                        <button
+                                            class="btn btn-neutral rounded-full w-full lg:w-50 h-12 font-normal hover:bg-zinc-800 transition">
+                                            Shop Collection
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="text-center py-5">
+                        <p class="text-sm lg:font-semibold">OUR VALUES</p>
+                        <h1 class="text-2xl font-bold">What We Stand For</h1>
+                    </div>
+                    <div class="w-full mb-10 grid grid-cols-2 lg:grid-cols-4 lg:p-10 text-center lg:divide-x divide-zinc-300">
+                        <div class="flex flex-col gap-1 items-center px-2 lg:px-10">
+                            <h2 class="text-md lg:text-lg font-bold">Timeless Design</h2>
+                            <p>Clean minimal, and versatile pieces that never go out of style.</p>
+                        </div>
+                        <div class="flex flex-col gap-1 items-center px-2 lg:px-10">
+                            <h2 class="text-md lg:text-lg font-bold">Premium Quality</h2>
+                            <p>Carefully selected materials and attention to detail for lasting comfort.</p>
+                        </div>
+                        <div class="flex flex-col gap-1 items-center px-2 lg:px-10">
+                            <h2 class="text-md lg:text-lg font-bold">Responsibility</h2>
+                            <p>Mindful production and sustainable choices for a better tomorrow.</p>
+                        </div>
+                        <div class="flex flex-col gap-1 items-center px-2 lg:px-10">
+                            <h2 class="text-md lg:text-lg font-bold">Made For You</h2>
+                            <p>Designed to fit your lifestyle and made to be worn, your way.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="mb-10">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 rounded-xl overflow-hidden">
+                        <div class="col-span-1 lg:col-span-1">
+                            <div class="bg-black h-auto">
+                                <div class="text-white flex flex-col gap-3 p-10 lg:pl-20 w-full lg:w-[70%]">
+                                    <p>OUR MISSION</p>
+                                    <h1 class="text-lg font-bold">Elevating Essentials.<br>Everyday.</h1>
+                                    <p>We're here to redefine the everyday wardrobe with modern essentials that blend form
+                                        and function. MONO is not just clothing. It's a way of life.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-span-1 lg:col-span-1 h-50 lg:h-full">
+                            <div class="bg-[url(/img/brands-2-page.png)] bg-cover h-full">
+        
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <section class="h-120">
-                <div class="bg-[url(/img/brands-page.png)] bg-cover h-full rounded-xl">
-                    <div class="w-[40%] h-full flex flex-col justify-center px-30">
-                        <p class="font-semibold">BRAND STORY</p>
-                        <h1 class="text-4xl font-bold py-8">SIMPLE. TIMELESS.<br>MADE TO LAST.</h1>
-
-                        <p class="font-semibold">We believe that true style comes from simplicity.
-                            MONO creates high-quality essentials with a focus on clean design, comfort, and durability.
-                            Pieces that you can wear, every day. For years.</p>
-                        <div class="mt-8">
-                            <div>
-                                <a href="shop.html">
-                                    <button
-                                        class="btn btn-neutral rounded-full w-full lg:w-50 h-12 font-normal hover:bg-zinc-800 transition">
-                                        Shop Collection
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <div class="text-center py-5">
-                    <p class="font-semibold">OUR VALUES</p>
-                    <h1 class="text-2xl font-bold">What We Stand For</h1>
-                </div>
-                <div class="flex p-10 text-center divide-x divide-zinc-300">
-                    <div class="flex flex-col gap-1 items-center px-20">
-                        <h2 class="text-lg font-bold">Timeless Design</h2>
-                        <p>Clean minimal, and versatile pieces that never go out of style.</p>
-                    </div>
-                    <div class="flex flex-col gap-1 items-center px-20">
-                        <h2 class="text-lg font-bold">Premium Quanlity</h2>
-                        <p>Carefully selected materials and attention to detail for lasting comfort.</p>
-                    </div>
-                    <div class="flex flex-col gap-1 items-center px-20">
-                        <h2 class="text-lg font-bold">Responsibility</h2>
-                        <p>Mindful production and sustainable choices for a better tomorrow.</p>
-                    </div>
-                    <div class="flex flex-col gap-1 items-center px-20">
-                        <h2 class="text-lg font-bold">Made For You</h2>
-                        <p>Designed to fit your lifestyle and made to be worn, your way.</p>
-                    </div>
-
-
-                </div>
-            </section>
-            <section class="mb-10">
-                <div class="grid grid-cols-12 rounded-xl overflow-hidden">
-                    <div class="col-span-6">
-                        <div class="bg-black h-auto">
-                            <div class="text-white flex flex-col gap-3 p-10 px-20 w-[60%]">
-                                <p>OUR MISSION</p>
-                                <h1 class="text-lg font-bold">Elevating Essentials.<br>Everyday.</h1>
-                                <p>We're here to redefine the everyday wardrobe with modern essentials that blend form
-                                    and function. MONO is not just clothing. It's a way of life.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-6">
-                        <div class="bg-[url(/img/brands-2-page.png)] bg-cover h-full">
-            
-                        </div>
-                    </div>
-                </div>
-            </section>
         </div>
-    </div>
+    </main>
     <footer>
         <div class="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
             <aside>

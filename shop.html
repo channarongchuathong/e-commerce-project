@@ -74,7 +74,7 @@
                         </a>
                     </div>
                     <div>
-                        <a href="#">
+                        <a href="login.html">
                             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
                                 <path d="M0 0h16v16H0z" fill="none" />
                                 <path fill="currentColor"
@@ -89,119 +89,110 @@
             </nav>
         </div>
     </header>
-    <div>
-        <div class="container mx-auto">
-            <div class="breadcrumbs text-sm border-t-1 border-zinc-300 py-[20px]">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li>Shop</li>
-                </ul>
+    <main>
+        <div>
+            <div class="container mx-auto">
+                <div class="breadcrumbs text-sm border-t-1 border-zinc-300 py-[20px] px-2">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li>Shop</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <section>
-        <div class="container mx-auto">
-            <div class="grid grid-cols-3 lg:grid-cols-4 gap-1">
-                <aside class="hidden lg:block">
-                    <div class="menu rounded-2xl w-56 border-1 border-zinc-200">
-                        <div>
-                            <div class="menu-title text-lg text-black font-bold border-b-1 border-zinc-300 p-3">
-                                Filter
-                            </div>
-                        </div>
-                        <ul class="border-b-1 border-zinc-300">
-                            <li>
-                                <label class="has-checked:bg-black has-checked:text-white">
-                                    <input type="radio" name="category" value="All" class="hidden">
-                                    All
-                                </label>
-                            </li>
-                            <li>
-                                <label class="has-checked:bg-black has-checked:text-white">
-                                    <input type="radio" name="category" value="Shirt" class="hidden">
-                                    Shirt
-                                </label>
-                            </li>
-                            <li>
-                                <label class="has-checked:bg-black has-checked:text-white">
-                                    <input type="radio" name="category" value="Hoodie" class="hidden">
-                                    Hoodie
-                                </label>
-                            </li>
-                            <li>
-                                <label class="has-checked:bg-black has-checked:text-white">
-                                    <input type="radio" name="category" value="Jeans" class="hidden">
-                                    Jeans
-                                </label>
-                            </li>
-                        </ul>
-
-                        <details class="collapse collapse-plus">
-                            <summary class="collapse-title text-lg text-black font-bold p-3">Price</summary>
-                            <div class="collapse-content">
-                                <input type="range" min="0" max="100" class="range range-xs" />
-                            </div>
-                        </details>
-
-
-
-
-
-
-                    </div>
-                </aside>
-                <main class="col-span-3">
-                    <div class="flex justify-between items-center">
-                        <div id="title-products" class="font-bold text-3xl pl-2">Products</div>
-                        <div class="flex items-center">
-                            <div class="text-sm text-gray-500 hidden lg:block">
-                                Showing 1-10 of 100 Products Sort by:
-                            </div>
+        <section>
+            <div class="container mx-auto">
+                <div class="grid grid-cols-3 lg:grid-cols-4 gap-1">
+                    <aside class="hidden lg:block">
+                        <div class="menu rounded-2xl w-56 border-1 border-zinc-200">
                             <div>
-                                <select id="sort"
-                                    class="select select-sm border-0 w-auto font-bold text-black text-xs lg:text-sm">
-                                    <option value="popular">Most Popular</option>
-                                    <option value="newest">Newest</option>
-                                    <option value="price-low">Price: Low to High</option>
-                                    <option value="price-high">Price: High to Low</option>
-                                </select>
+                                <div class="menu-title text-lg text-black font-bold border-b-1 border-zinc-300 p-3">
+                                    Filter
+                                </div>
+                            </div>
+                            <ul class="border-b-1 border-zinc-300">
+                                <li>
+                                    <label class="has-checked:bg-black has-checked:text-white">
+                                        <input type="radio" name="category" value="All" class="hidden">
+                                        All
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="has-checked:bg-black has-checked:text-white">
+                                        <input type="radio" name="category" value="Shirt" class="hidden">
+                                        Shirt
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="has-checked:bg-black has-checked:text-white">
+                                        <input type="radio" name="category" value="Hoodie" class="hidden">
+                                        Hoodie
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="has-checked:bg-black has-checked:text-white">
+                                        <input type="radio" name="category" value="Jeans" class="hidden">
+                                        Jeans
+                                    </label>
+                                </li>
+                            </ul>
+                            <details class="collapse collapse-plus">
+                                <summary class="collapse-title text-lg text-black font-bold p-3">Price</summary>
+                                <div class="collapse-content">
+                                    <input type="range" min="0" max="100" class="range range-xs" />
+                                </div>
+                            </details>
+                        </div>
+                    </aside>
+                    <main class="col-span-3">
+                        <div class="flex justify-between items-center">
+                            <div id="title-products" class="font-bold text-3xl pl-2">Products</div>
+                            <div class="flex items-center">
+                                <div class="text-sm text-gray-500 hidden lg:block">
+                                    Showing 1-10 of 100 Products Sort by:
+                                </div>
+                                <div>
+                                    <select id="sort"
+                                        class="select select-sm border-0 w-auto font-bold text-black text-xs lg:text-sm">
+                                        <option value="popular">Most Popular</option>
+                                        <option value="newest">Newest</option>
+                                        <option value="price-low">Price: Low to High</option>
+                                        <option value="price-high">Price: High to Low</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div id="products-list" class="grid grid-cols-2 lg:grid-cols-3 gap-5 p-5">
-
-
-
-
-                    </div>
-                    <section class="flex justify-between py-2">
-                        <div class="btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                                <path d="M0 0h24v24H0z" fill="none" />
-                                <path fill="currentColor"
-                                    d="M20 11v2H8l5.5 5.5l-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5L8 11z" />
-                            </svg>
-                            <div>Previous</div>
+                        <div id="products-list" class="grid grid-cols-2 lg:grid-cols-3 gap-5 p-5">
                         </div>
-                        <div class="join">
-                            <button class="join-item btn btn-active">1</button>
-                            <button class="join-item btn">2</button>
-                            <button class="join-item btn">3</button>
-                            <button class="join-item btn">4</button>
-                        </div>
-                        <div class="btn">
-                            <div>Next</div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                                <path d="M0 0h24v24H0z" fill="none" />
-                                <path fill="currentColor"
-                                    d="M4 11v2h12l-5.5 5.5l1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5L16 11z" />
-                            </svg>
-                        </div>
-                    </section>
-                </main>
+                        <section class="flex justify-between py-2 px-2">
+                            <div class="btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <path d="M0 0h24v24H0z" fill="none" />
+                                    <path fill="currentColor"
+                                        d="M20 11v2H8l5.5 5.5l-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5L8 11z" />
+                                </svg>
+                                <div>Previous</div>
+                            </div>
+                            <div class="join">
+                                <button class="join-item btn btn-active">1</button>
+                                <button class="join-item btn">2</button>
+                                <button class="join-item btn">3</button>
+                                <button class="join-item btn">4</button>
+                            </div>
+                            <div class="btn">
+                                <div>Next</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <path d="M0 0h24v24H0z" fill="none" />
+                                    <path fill="currentColor"
+                                        d="M4 11v2h12l-5.5 5.5l1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5L16 11z" />
+                                </svg>
+                            </div>
+                        </section>
+                    </main>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="footer sm:footer-horizontal bg-base-200 text-base-content p-10 mt-10">

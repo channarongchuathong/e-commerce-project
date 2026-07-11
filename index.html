@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md">
         <div class="container mx-auto">
             <nav class="flex justify-between text-center h-16 items-center font-bold px-3 lg:px-5">
                 <div class="lg:hidden flex">
@@ -28,42 +28,34 @@
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                                 </svg>
+
                             </label>
                         </div>
                         <div class="drawer-side">
                             <label for="my-drawer-1" aria-label="close sidebar" class="drawer-overlay"></label>
-                            <ul class="menu bg-base-200 min-h-full w-80 p-4">
-                                <li><a href="shop.html">
-                                        Shop</a>
-                                </li>
-                                <li><a href="#">
-                                        On Sale</a>
-                                </li>
-                                <li><a href="#">
-                                        New Arivals</a>
-                                </li>
-                                <li><a href="#">
-                                        Brands</a>
-                                </li>
+                            <ul class="menu bg-base-200 min-h-full w-50 p-4">
+                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="brands.html">Brands</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="text-2xl">
-                    <a href="#">L O G O</a>
+                    <a href="index.html">L O G O</a>
                 </div>
                 <ul class="hidden lg:flex gap-6">
                     <li><a href="shop.html"
                             class="border-b-2 border-transparent hover:border-black transition duration-300">
                             Shop</a>
                     </li>
-                    <li><a href="#" class="border-b-2 border-transparent hover:border-black transition duration-300">
+                    <li><a href="shop.html" class="border-b-2 border-transparent hover:border-black transition duration-300">
                             On Sale</a>
                     </li>
-                    <li><a href="#" class="border-b-2 border-transparent hover:border-black transition duration-300">
+                    <li><a href="shop.html" class="border-b-2 border-transparent hover:border-black transition duration-300">
                             New Arivals</a>
                     </li>
-                    <li><a href="#" class="border-b-2 border-transparent hover:border-black transition duration-300">
+                    <li><a href="brands.html"
+                            class="border-b-2 border-transparent hover:border-black transition duration-300">
                             Brands</a>
                     </li>
                 </ul>
@@ -88,8 +80,9 @@
                         </button>
                     </div>
                     <div>
-                        <a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <a href="cart.html">
+                            <svg class="hover:text-zinc-500" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                viewBox="0 0 24 24">
                                 <path d="M0 0h24v24H0z" fill="none" />
                                 <path fill="currentColor"
                                     d="M21 6H7.05L5.94 2.68A1 1 0 0 0 4.99 2h-3v2h2.28l3.54 10.63A2 2 0 0 0 9.71 16h7.59a2 2 0 0 0 1.87-1.3l2.76-7.35c.11-.31.07-.65-.11-.92A1 1 0 0 0 21 6m-3.69 8H9.72l-2-6h11.84zM10 18a2 2 0 1 0 0 4a2 2 0 1 0 0-4m7 0a2 2 0 1 0 0 4a2 2 0 1 0 0-4" />
@@ -97,8 +90,9 @@
                         </a>
                     </div>
                     <div>
-                        <a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+                        <a href="login.html">
+                            <svg class="hover:text-zinc-500" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                viewBox="0 0 16 16">
                                 <path d="M0 0h16v16H0z" fill="none" />
                                 <path fill="currentColor"
                                     d="M11 7c0 1.66-1.34 3-3 3S5 8.66 5 7s1.34-3 3-3s3 1.34 3 3" />
@@ -112,350 +106,343 @@
             </nav>
         </div>
     </header>
-    <section class="bg-zinc-100 bg-none lg:bg-[url(img/hero_main.png)] bg-cover">
-        <div class="container mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-2 min-h-200">
-                <div class="flex flex-col items-start justify-center">
-                    <div class="flex flex-col py-8 w-full px-10 lg:px-0">
-                        <div class="font-extrabold text-4xl lg:text-6xl mb-4">
-                            <div>FIND CLOTHES<br>THAT MATCHES<br>YOUR STYLE</div>
+    <main>
+        <section class="bg-zinc-100 bg-none lg:bg-[url(img/hero_main.png)] bg-cover">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-1 xl:grid-cols-2  min-h-170 2xl:min-h-screen">
+                    <div class="flex flex-col items-start justify-center">
+                        <div class="flex flex-col py-8 w-full px-10 lg:px-/">
+                            <div class="font-extrabold text-4xl lg:text-6xl mb-4">
+                                <div>FIND CLOTHES<br>THAT MATCHES<br>YOUR STYLE</div>
+                            </div>
+                            <div>
+                                <p>Browse through our diverse range of meticulously crafted garments, designed
+                                    <br>
+                                    to bring out your individuality and cater to your sense of style.
+                                </p>
+                            </div>
+                            <div>
+                                <div class="mt-5 px-10 lg:px-0">
+                                    <a href="shop.html">
+                                        <button
+                                            class="btn btn-neutral rounded-full w-full lg:w-50 h-12 font-normal hover:bg-zinc-800 transition">
+                                            Shop Now
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div
+                                class="flex mt-8 divide-x divide-zinc-300 text-center w-full justify-center lg:justify-start">
+                                <div class="px-3">
+                                    <div class="font-bold text-3xl">200+</div>
+                                    <p class="text-zinc-500">international Brands</p>
+                                </div>
+                                <div class="px-3">
+                                    <div class="font-bold text-3xl">2000+</div>
+                                    <p class="text-zinc-500">High-Quality Products</p>
+                                </div>
+                                <div class="px-3">
+                                    <div class="font-bold text-3xl">30,000+</div>
+                                    <p class="text-zinc-500">Happy Customers</p>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <p>Browse through our diverse range of meticulously crafted garments, designed
-                                <br>
-                                to bring out your individuality and cater to your sense of style.
-                            </p>
+                    </div>
+                    <div class="flex">
+                        <img src="./img/hero-section-mb.png" class="lg:hidden object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-black">
+            <div class="container mx-auto">
+                <div class="text-white py-8">
+                    <div class="flex justify-evenly text-xl font-semibold">
+                        <div>MONO</div>
+                        <div>NOIR</div>
+                        <div>VERO</div>
+                        <div>AURE</div>
+                        <div>NOVA</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container mx-auto p-10 border-b border-zinc-300">
+                <h1 class="text-2xl lg:text-4xl font-bold text-center mt-10">NEW ARRIVALS</h1>
+                <p class="text-sm lg:text-md text-center text-zinc-500 font-semibold mt-3">Discover the latest pieces,
+                    crafted for style and
+                    comfort.</p>
+                <div class="flex items-center gap-5">
+                    <div id="prev-New"
+                        class="hidden lg:flex btn btn-circle btn-lg bg-white drop-shadow-md hover:bg-zinc-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                        </svg>
+                    </div>
+                    <div id="carouselNew" class="overflow-x-auto scrollbar-none">
+                        <div id="newArrivals" class="flex gap-5 py-[50px]">
                         </div>
+                    </div>
+                    <div id="next-New"
+                        class="hidden lg:flex btn btn-circle btn-lg bg-white drop-shadow-md hover:bg-zinc-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <a href="shop.html">
+                        <button class="btn rounded-full w-50 block">
+                            <div>View All</div>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container mx-auto p-10">
+                <h1 class="text-2xl lg:text-4xl font-bold text-center mt-10">BEST SELLING</h1>
+                <p class="text-sm lg:text-md text-center text-zinc-500 font-semibold mt-3">Our most-loved essentials,
+                    chosen for timeless style and everyday comfort.</p>
+                <div class="flex items-center gap-5">
+                    <div id="prev-best"
+                        class="hidden lg:flex btn btn-circle btn-lg bg-white drop-shadow-md hover:bg-zinc-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                        </svg>
+                    </div>
+                    <div id="carouselBest" class="overflow-x-auto scrollbar-none">
+                        <div id="bestSellerContainer" class="flex gap-5 py-[50px]">
+                        </div>
+                    </div>
+                    <div id="next-best"
+                        class="hidden lg:flex btn btn-circle btn-lg bg-white drop-shadow-md hover:bg-zinc-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <a href="shop.html">
+                        <button class="btn rounded-full w-50 block">
+                            <div>View All</div>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container mx-auto">
+                <div class="bg-zinc-200 p-5 lg:p-20 lg:rounded-4xl">
+                    <h1 class="text-4xl font-extrabold text-center">BROWSE BY DRESS STYLE</h1>
+                    <div
+                        class="grid grid-cols-4 lg:grid-cols-3 mt-10 font-semibold text-2xl auto-rows-[200px] lg:auto-rows-[300px] gap-1 lg:gap-4">
+                        <div
+                            class="col-span-1 lg:col-span-1 bg-[url(img/card-casual.jpg)] bg-cover bg-center rounded-lg lg:p-5 shadow-md">
+                            <div
+                                class="flex items-end lg:items-start text-lg lg:text-2xl h-full text-white lg:text-black">
+                                Casual</div>
+                        </div>
+                        <div
+                            class="col-span-1 lg:col-span-2 bg-[url(img/card-formal.jpg)] bg-cover bg-[80%_center] lg:bg-center rounded-lg lg:p-5 shadow-md">
+                            <div
+                                class="flex items-end lg:items-start text-lg lg:text-2xl h-full text-white lg:text-black">
+                                Formal</div>
+                        </div>
+                        <div
+                            class="col-span-1 lg:col-span-2 bg-[url(img/card-party.jpg)] bg-cover bg-[80%_center] lg:bg-center  rounded-lg lg:p-5 shadow-md">
+                            <div
+                                class="flex items-end lg:items-start text-lg lg:text-2xl h-full text-white lg:text-black">
+                                Party</div>
+                        </div>
+                        <div
+                            class="col-span-1 lg:col-span-1 bg-[url(img/card-gym.jpg)] bg-cover bg-center rounded-lg lg:p-5 shadow-md">
+                            <div
+                                class="flex items-end lg:items-start text-lg lg:text-2xl h-full text-white lg:text-black">
+                                Gym</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container mx-auto">
+                <div class="py-8">
+                    <div class="flex justify-between items-center">
+                        <h1 class="text-4xl font-extrabold">OUR HAPPY CUSTOMERS</h1>
                         <div>
-                            <div class="mt-5 px-10 lg:px-0">
-                                <a href="shop.html">
-                                    <button
-                                        class="btn btn-neutral rounded-full w-full lg:w-50 h-12 font-normal hover:bg-zinc-800 transition">
-                                        Shop Now
-                                    </button>
+                            <div class="flex w-full justify-center gap-2 py-5">
+                                <a href="#item1" class="btn btn-xs border-none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                        class="size-5 text-gray-500">
+                                        <path fill-rule="evenodd"
+                                            d="M18 10a.75.75 0 0 1-.75.75H4.66l2.1 1.95a.75.75 0 1 1-1.02 1.1l-3.5-3.25a.75.75 0 0 1 0-1.1l3.5-3.25a.75.75 0 1 1 1.02 1.1l-2.1 1.95h12.59A.75.75 0 0 1 18 10Z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </a>
+                                <a href="#item2" class="btn btn-xs border-none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                        class="size-5 text-gray-500">
+                                        <path fill-rule="evenodd"
+                                            d="M2 10a.75.75 0 0 1 .75-.75h12.59l-2.1-1.95a.75.75 0 1 1 1.02-1.1l3.5 3.25a.75.75 0 0 1 0 1.1l-3.5 3.25a.75.75 0 1 1-1.02-1.1l2.1-1.95H2.75A.75.75 0 0 1 2 10Z"
+                                            clip-rule="evenodd" />
+                                    </svg>
                                 </a>
                             </div>
                         </div>
-                        <div class="flex mt-8 divide-x divide-zinc-300 text-center w-full justify-center lg:justify-start">
-                            <div class="px-3">
-                                <div class="font-bold text-3xl">200+</div>
-                                <p class="text-zinc-500">international Brands</p>
-                            </div>
-                            <div class="px-3">
-                                <div class="font-bold text-3xl">2000+</div>
-                                <p class="text-zinc-500">High-Quality Products</p>
-                            </div>
-                            <div class="px-3">
-                                <div class="font-bold text-3xl">30,000+</div>
-                                <p class="text-zinc-500">Happy Customers</p>
-                            </div>
-                        </div>
                     </div>
-                </div>
-                <div class="flex">
-                    <img src="./img/hero-section-mb.png" class="lg:hidden object-cover">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="bg-black">
-        <div class="container mx-auto">
-            <div class="text-white py-8">
-                <div class="flex justify-evenly text-xl font-semibold">
-                    <div>MONO</div>
-                    <div>NOIR</div>
-                    <div>VERO</div>
-                    <div>AURE</div>
-                    <div>NOVA</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container mx-auto p-10 border-b border-zinc-300">
-            <h1 class="text-2xl lg:text-4xl font-bold text-center mt-10">NEW ARRIVALS</h1>
-            <p class="text-sm lg:text-md text-center text-zinc-500 font-semibold mt-3">Discover the latest pieces, crafted for style and
-                comfort.</p>
-            <div class="flex items-center gap-5">
-                <div id="prev-New" class="hidden lg:flex btn btn-circle btn-lg bg-white drop-shadow-md hover:bg-zinc-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
-                        stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-                    </svg>
-
-                </div>
-                <div id="carouselNew" class="overflow-x-auto scrollbar-none">
-                    <div id="newArrivals" class="flex gap-5 py-[50px]">
-                    </div>
-                </div>
-
-                <div id="next-New" class="hidden lg:flex btn btn-circle btn-lg bg-white drop-shadow-md hover:bg-zinc-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
-                        stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                    </svg>
-
-                </div>
-
-
-            </div>
-            <div class="flex justify-center">
-                <a href="shop.html">
-                    <button class="btn rounded-full w-50 block">
-                        <div>View All</div>
-                    </button>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container mx-auto p-10">
-            <h1 class="text-2xl lg:text-4xl font-bold text-center mt-10">BEST SELLING</h1>
-            <p class="text-sm lg:text-md text-center text-zinc-500 font-semibold mt-3">Our most-loved essentials, chosen for timeless style and everyday comfort.</p>
-            <div class="flex items-center gap-5">
-                <div id="prev-best" class="hidden lg:flex btn btn-circle btn-lg bg-white drop-shadow-md hover:bg-zinc-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
-                        stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-                    </svg>
-
-                </div>
-                <div id="carouselBest" class="overflow-x-auto scrollbar-none">
-                    <div id="bestSellerContainer" class="flex gap-5 py-[50px]">
-
-                    </div>
-                </div>
-                <div id="next-best" class="hidden lg:flex btn btn-circle btn-lg bg-white drop-shadow-md hover:bg-zinc-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
-                        stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                    </svg>
-
-                </div>
-
-
-            </div>
-            <div class="flex justify-center">
-                <a href="shop.html">
-                    <button class="btn rounded-full w-50 block">
-                        <div>View All</div>
-                    </button>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container mx-auto">
-            <div class="bg-zinc-200 p-5 lg:p-20 lg:rounded-4xl">
-                <h1 class="text-4xl font-extrabold text-center">BROWSE BY DRESS STYLE</h1>
-                <div class="grid grid-cols-4 lg:grid-cols-3 mt-10 font-semibold text-2xl auto-rows-[200px] lg:auto-rows-[300px] gap-1 lg:gap-4">
-                    <div class="col-span-1 lg:col-span-1 bg-[url(img/card-casual.jpg)] bg-cover bg-center rounded-lg lg:p-5 shadow-md">
-                        <div class="flex items-end lg:items-start text-lg lg:text-2xl h-full text-white lg:text-black">Casual</div>
-                    </div>
-                    <div
-                        class="col-span-1 lg:col-span-2 bg-[url(img/card-formal.jpg)] bg-cover bg-[80%_center] lg:bg-center rounded-lg lg:p-5 shadow-md">
-                        <div class="flex items-end lg:items-start text-lg lg:text-2xl h-full text-white lg:text-black">Formal</div>
-                    </div>
-                    <div
-                        class="col-span-1 lg:col-span-2 bg-[url(img/card-party.jpg)] bg-cover bg-[80%_center] lg:bg-center  rounded-lg lg:p-5 shadow-md">
-                        <div class="flex items-end lg:items-start text-lg lg:text-2xl h-full text-white lg:text-black">Party</div>
-                    </div>
-                    <div class="col-span-1 lg:col-span-1 bg-[url(img/card-gym.jpg)] bg-cover bg-center rounded-lg lg:p-5 shadow-md">
-                        <div class="flex items-end lg:items-start text-lg lg:text-2xl h-full text-white lg:text-black">Gym</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container mx-auto">
-            <div class="py-8">
-                <div class="flex justify-between items-center">
-                    <h1 class="text-4xl font-extrabold">OUR HAPPY CUSTOMERS</h1>
                     <div>
-                        <div class="flex w-full justify-center gap-2 py-5">
-                            <a href="#item1" class="btn btn-xs border-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                    class="size-5 text-gray-500">
-                                    <path fill-rule="evenodd"
-                                        d="M18 10a.75.75 0 0 1-.75.75H4.66l2.1 1.95a.75.75 0 1 1-1.02 1.1l-3.5-3.25a.75.75 0 0 1 0-1.1l3.5-3.25a.75.75 0 1 1 1.02 1.1l-2.1 1.95h12.59A.75.75 0 0 1 18 10Z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </a>
-                            <a href="#item2" class="btn btn-xs border-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                    class="size-5 text-gray-500">
-                                    <path fill-rule="evenodd"
-                                        d="M2 10a.75.75 0 0 1 .75-.75h12.59l-2.1-1.95a.75.75 0 1 1 1.02-1.1l3.5 3.25a.75.75 0 0 1 0 1.1l-3.5 3.25a.75.75 0 1 1-1.02-1.1l2.1-1.95H2.75A.75.75 0 0 1 2 10Z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="carousel w-full p-6">
-                        <div id="item1" class="carousel-item pr-2">
-                            <div class="flex gap-2">
-
-                                <div class="card w-96 rounded-2xl border-1 border-gray-200">
-                                    <div class="card-body">
-
-                                        <div class="rating gap-1">
-                                            <div class="mask mask-star bg-yellow-400" aria-label="1 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="2 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="3 star"
-                                                aria-current="true"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="4 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="5 star"></div>
+                        <div class="carousel w-full p-6">
+                            <div id="item1" class="carousel-item pr-2">
+                                <div class="flex gap-2">
+                                    <div class="card w-96 rounded-2xl border-1 border-gray-200">
+                                        <div class="card-body">
+                                            <div class="rating gap-1">
+                                                <div class="mask mask-star bg-yellow-400" aria-label="1 star"></div>
+                                                <div class="mask mask-star bg-yellow-400" aria-label="2 star"></div>
+                                                <div class="mask mask-star bg-yellow-400" aria-label="3 star"
+                                                    aria-current="true"></div>
+                                                <div class="mask mask-star bg-yellow-400" aria-label="4 star"></div>
+                                                <div class="mask mask-star bg-yellow-400" aria-label="5 star"></div>
+                                            </div>
+                                            <div class="flex gap-1 items-center">
+                                                <h2 class="card-title">Art1</h2>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="currentColor" class="size-5 text-green-600">
+                                                    <path fill-rule="evenodd"
+                                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                                                        clip-rule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            <p>Clean fit, looks really good.</p>
                                         </div>
-
-                                        <div class="flex gap-1 items-center">
-                                            <h2 class="card-title">Art1</h2>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-5 text-green-600">
-                                                <path fill-rule="evenodd"
-                                                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </div>
-                                        <p>Clean fit, looks really good.</p>
                                     </div>
-                                </div>
-
-                                <div class="card bg-base-100 w-96 shadow-sm border-1 border-base-300">
-                                    <div class="card-body">
-
-                                        <div class="rating gap-1">
-                                            <div class="mask mask-star bg-yellow-400" aria-label="1 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="2 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="3 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="4 star"
-                                                aria-current="true"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="5 star"></div>
+                                    <div class="card bg-base-100 w-96 shadow-sm border-1 border-base-300">
+                                        <div class="card-body">
+                                            <div class="rating gap-1">
+                                                <div class="mask mask-star bg-yellow-400" aria-label="1 star"></div>
+                                                <div class="mask mask-star bg-yellow-400" aria-label="2 star"></div>
+                                                <div class="mask mask-star bg-yellow-400" aria-label="3 star"></div>
+                                                <div class="mask mask-star bg-yellow-400" aria-label="4 star"
+                                                    aria-current="true"></div>
+                                                <div class="mask mask-star bg-yellow-400" aria-label="5 star"></div>
+                                            </div>
+                                            <div class="flex gap-1 items-center">
+                                                <h2 class="card-title">Art2</h2>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="currentColor" class="size-5 text-green-600">
+                                                    <path fill-rule="evenodd"
+                                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                                                        clip-rule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            <p>Clean fit, looks really good.</p>
                                         </div>
-
-                                        <div class="flex gap-1 items-center">
-                                            <h2 class="card-title">Art2</h2>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-5 text-green-600">
-                                                <path fill-rule="evenodd"
-                                                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </div>
-                                        <p>Clean fit, looks really good.</p>
                                     </div>
-                                </div>
-
-                                <div class="card bg-base-100 w-96 shadow-sm border-1 border-base-300">
-                                    <div class="card-body">
-
-                                        <div class="rating gap-1">
-                                            <div class="mask mask-star bg-yellow-400" aria-label="1 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="2 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="3 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="4 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="5 star"
-                                                aria-current="true"></div>
+                                    <div class="card bg-base-100 w-96 shadow-sm border-1 border-base-300">
+                                        <div class="card-body">
+                                            <div class="rating gap-1">
+                                                <div class="mask mask-star bg-yellow-400" aria-label="1 star"></div>
+                                                <div class="mask mask-star bg-yellow-400" aria-label="2 star"></div>
+                                                <div class="mask mask-star bg-yellow-400" aria-label="3 star"></div>
+                                                <div class="mask mask-star bg-yellow-400" aria-label="4 star"></div>
+                                                <div class="mask mask-star bg-yellow-400" aria-label="5 star"
+                                                    aria-current="true"></div>
+                                            </div>
+                                            <div class="flex gap-1 items-center">
+                                                <h2 class="card-title">Art3</h2>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="currentColor" class="size-5 text-green-600">
+                                                    <path fill-rule="evenodd"
+                                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                                                        clip-rule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            <p>Clean fit, looks really good.</p>
                                         </div>
-
-                                        <div class="flex gap-1 items-center">
-                                            <h2 class="card-title">Art3</h2>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-5 text-green-600">
-                                                <path fill-rule="evenodd"
-                                                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </div>
-                                        <p>Clean fit, looks really good.</p>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div id="item2" class="carousel-item">
-                            <div class="flex gap-2">
-                                <div class="card bg-base-100 w-96 shadow-sm border-1 border-base-300">
-                                    <div class="card-body">
-
-                                        <div class="rating gap-1">
-                                            <div class="mask mask-star bg-yellow-400" aria-label="1 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="2 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="3 star"
-                                                aria-current="true"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="4 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="5 star"></div>
+                            <div id="item2" class="carousel-item">
+                                <div class="flex gap-2">
+                                    <div class="card bg-base-100 w-96 shadow-sm border-1 border-base-300">
+                                        <div class="card-body">
+                                            <div class="rating gap-1">
+                                                <div class="mask mask-star bg-yellow-400" aria-label="1 star"></div>
+                                                <div class="mask mask-star bg-yellow-400" aria-label="2 star"></div>
+                                                <div class="mask mask-star bg-yellow-400" aria-label="3 star"
+                                                    aria-current="true"></div>
+                                                <div class="mask mask-star bg-yellow-400" aria-label="4 star"></div>
+                                                <div class="mask mask-star bg-yellow-400" aria-label="5 star"></div>
+                                            </div>
+                                            <div class="flex gap-1 items-center">
+                                                <h2 class="card-title">Art4</h2>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="currentColor" class="size-5 text-green-600">
+                                                    <path fill-rule="evenodd"
+                                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                                                        clip-rule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            <p>Clean fit, looks really good.</p>
                                         </div>
-
-                                        <div class="flex gap-1 items-center">
-                                            <h2 class="card-title">Art4</h2>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-5 text-green-600">
-                                                <path fill-rule="evenodd"
-                                                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </div>
-                                        <p>Clean fit, looks really good.</p>
                                     </div>
-                                </div>
-
-                                <div class="card bg-base-100 w-96 shadow-sm border-1 border-base-300">
-                                    <div class="card-body">
-
-                                        <div class="rating gap-1">
-                                            <div class="mask mask-star bg-yellow-400" aria-label="1 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="2 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="3 star"
-                                                aria-current="true"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="4 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="5 star"></div>
+                                    <div class="card bg-base-100 w-96 shadow-sm border-1 border-base-300">
+                                        <div class="card-body">
+                                            <div class="rating gap-1">
+                                                <div class="mask mask-star bg-yellow-400" aria-label="1 star"></div>
+                                                <div class="mask mask-star bg-yellow-400" aria-label="2 star"></div>
+                                                <div class="mask mask-star bg-yellow-400" aria-label="3 star"
+                                                    aria-current="true"></div>
+                                                <div class="mask mask-star bg-yellow-400" aria-label="4 star"></div>
+                                                <div class="mask mask-star bg-yellow-400" aria-label="5 star"></div>
+                                            </div>
+                                            <div class="flex gap-1 items-center">
+                                                <h2 class="card-title">Art5</h2>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="currentColor" class="size-5 text-green-600">
+                                                    <path fill-rule="evenodd"
+                                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                                                        clip-rule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            <p>Clean fit, looks really good.</p>
                                         </div>
-
-                                        <div class="flex gap-1 items-center">
-                                            <h2 class="card-title">Art5</h2>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-5 text-green-600">
-                                                <path fill-rule="evenodd"
-                                                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </div>
-                                        <p>Clean fit, looks really good.</p>
                                     </div>
-                                </div>
-
-                                <div class="card bg-base-100 w-96 shadow-sm border-1 border-base-300">
-                                    <div class="card-body">
-
-                                        <div class="rating gap-1">
-                                            <div class="mask mask-star bg-yellow-400" aria-label="1 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="2 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="3 star"
-                                                aria-current="true"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="4 star"></div>
-                                            <div class="mask mask-star bg-yellow-400" aria-label="5 star"></div>
+                                    <div class="card bg-base-100 w-96 shadow-sm border-1 border-base-300">
+                                        <div class="card-body">
+                                            <div class="rating gap-1">
+                                                <div class="mask mask-star bg-yellow-400" aria-label="1 star"></div>
+                                                <div class="mask mask-star bg-yellow-400" aria-label="2 star"></div>
+                                                <div class="mask mask-star bg-yellow-400" aria-label="3 star"
+                                                    aria-current="true"></div>
+                                                <div class="mask mask-star bg-yellow-400" aria-label="4 star"></div>
+                                                <div class="mask mask-star bg-yellow-400" aria-label="5 star"></div>
+                                            </div>
+                                            <div class="flex gap-1 items-center">
+                                                <h2 class="card-title">Art6</h2>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="currentColor" class="size-5 text-green-600">
+                                                    <path fill-rule="evenodd"
+                                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                                                        clip-rule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            <p>Clean fit, looks really good.</p>
                                         </div>
-
-                                        <div class="flex gap-1 items-center">
-                                            <h2 class="card-title">Art6</h2>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-5 text-green-600">
-                                                <path fill-rule="evenodd"
-                                                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </div>
-                                        <p>Clean fit, looks really good.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-    </section>
+        </section>
+    </main>
     <footer>
         <div class="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
             <aside>

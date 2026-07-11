@@ -1,11 +1,12 @@
 import { products } from "./products.js"
 import { renderProducts } from "./render.js";
 
+
 const productsContainer = document.getElementById("products-list")
 
-let searchText = "";
-let selectedCategory = "All";
-let sortType = "popular";
+let searchText = ""
+let selectedCategory = "All"
+let sortType = "popular"
 applyFilters();
 
 function applyFilters() {
@@ -62,10 +63,13 @@ categoryRadio.forEach((radio) => {
 
         if (radio.value == "All") {
             titleProducts.textContent = "Products"
+
+             searchText = ""
+             searchInput.value = ""
         } else {
             titleProducts.textContent = radio.value
         }
-        
+
         applyFilters()
     })
 })
@@ -78,3 +82,18 @@ sortSelect.addEventListener("change", () => {
     applyFilters()
 })
 
+
+/// แสดงสินค้าจากการค้นหาหน้าแรก 
+
+function loadSearchFromURL() {
+    const params = new URLSearchParams(window.location.search)
+    const keyword = params.get("search")
+
+    if (keyword) {
+        searchInput.value = keyword;
+        searchText = keyword.toLowerCase();
+        applyFilters();
+    }
+}
+
+loadSearchFromURL()
