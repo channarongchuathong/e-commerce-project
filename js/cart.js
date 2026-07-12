@@ -40,8 +40,8 @@ export function renderCart(cart, cartContainer) {
 
         const cartCard = document.createElement("div")
         cartCard.className = "flex py-[20px]"
-        cartCard.innerHTML = ` <div class="rounded-lg overflow-hidden">
-                                <img src="${selectedColor.images[0]}" alt="" class="w-30 h-30 lg:w-35 lg:h-40 object-cover">
+        cartCard.innerHTML = ` <div class="overflow-hidden">
+                                <img src="${selectedColor.images[0]}" alt="" class="w-30 h-30 lg:w-35 lg:h-40 object-cover rounded-lg">
                             </div>
                             <div class="flex justify-between flex-1 py-[10px] px-2 lg:px-[20px]">
                                 <div class="flex flex-col justify-between">

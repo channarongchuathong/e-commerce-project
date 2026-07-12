@@ -34,7 +34,7 @@ export function createProductCard(product) {
     link.appendChild(detailCard)
 
     const productName = document.createElement("h1")
-    productName.className = "card-title"
+    productName.className = "card-title text-sm lg:text-lg"
     productName.textContent = product.name
 
     detailCard.appendChild(productName)
