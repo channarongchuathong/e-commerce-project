@@ -1,7 +1,7 @@
 
 import { products } from "./products.js";
 import { renderProducts } from "./render.js";
-import { setupSearch } from "./seach.js";
+import { setupSearch,setupSearchMobile } from "./seach.js";
 
 // แสดง url ตามสินค้าที่เลือกด้วย id
 
@@ -215,3 +215,13 @@ const recommendProductsContainer = document.getElementById("recommendProducts")
 renderProducts(recommendProductsRender,recommendProductsContainer)
 
 setupSearch()
+
+const searchInput = document.getElementById("search-input")
+setupSearch(searchInput)
+
+const searchButton = document.getElementById("search-mobile-button")
+const searchContainer = document.getElementById("search-mobile-container")
+const searchInputMobile = document.getElementById("search-input-mobile")
+setupSearch(searchInputMobile)
+
+setupSearchMobile(searchButton,searchContainer,searchInputMobile)

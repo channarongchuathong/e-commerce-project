@@ -33,15 +33,25 @@
                             </label>
                         </div>
                         <div class="drawer-side">
-                            <label for="my-drawer-1" aria-label="close sidebar" class="drawer-overlay"></label>
-                            <ul class="menu bg-base-200 min-h-full w-50 p-4">
-                                <li><a href="shop.html">Shop</a></li>
-                                <li><a href="brands.html">Brands</a></li>
+                            <label for="my-drawer-1" aria-label="close sidebar" class="drawer-overlay bg-black/40"></label>
+                            <ul class="menu bg-base-200 min-h-full w-[50%] p-4">
+                                <h1 class="text-xl py-3">L O G O</h1>
+                                <h1 class="text-start text-lg font-semibold">Menu</h1>
+                                <div class="divide-y divide-zinc-300 py-3 mx-3">
+                                    <li><a href="shop.html">Shop</a></li>
+                                    <li><a href="shop.html">On Sale</a></li>
+                                    <li><a href="shop.html">New Arrivals</a></li>
+                                    <li><a href="brands.html">Brands</a></li>
+                                    <li><a href="login.html">Sign In</a></li>
+                                </div>
+                                <div>
+                                    <button class="btn btn-neutral w-full rounded-full">Shop Now</button>
+                                </div>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="text-2xl">
+                <div id="logo" class="text-2xl">
                     <a href="index.html">L O G O</a>
                 </div>
                 <ul class="hidden lg:flex gap-6">
@@ -49,10 +59,12 @@
                             class="border-b-2 border-transparent hover:border-black transition duration-300">
                             Shop</a>
                     </li>
-                    <li><a href="shop.html" class="border-b-2 border-transparent hover:border-black transition duration-300">
+                    <li><a href="shop.html"
+                            class="border-b-2 border-transparent hover:border-black transition duration-300">
                             On Sale</a>
                     </li>
-                    <li><a href="shop.html" class="border-b-2 border-transparent hover:border-black transition duration-300">
+                    <li><a href="shop.html"
+                            class="border-b-2 border-transparent hover:border-black transition duration-300">
                             New Arivals</a>
                     </li>
                     <li><a href="brands.html"
@@ -60,7 +72,7 @@
                             Brands</a>
                     </li>
                 </ul>
-                <label class="input hidden lg:flex rounded-full">
+                <label id="search-desktop" class="input hidden lg:flex rounded-full">
                     <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
                             stroke="currentColor">
@@ -71,7 +83,7 @@
                     <input id="search-input" type="search" required placeholder="Search" />
                 </label>
                 <div class="flex gap-2 text-2xl">
-                    <div class="lg:hidden">
+                    <div id="search-mobile-button" class="lg:hidden">
                         <button>
                             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                                 <path d="M0 0h24v24H0z" fill="none" />
@@ -105,6 +117,20 @@
                     </div>
                 </div>
             </nav>
+            <div>
+                <div id="search-mobile-container" class="w-full h-10 hidden">
+                    <label class="input w-full rounded-none">
+                        <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
+                                stroke="currentColor">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.3-4.3"></path>
+                            </g>
+                        </svg>
+                        <input id="search-input-mobile" type="search" required placeholder="Search" />
+                    </label>
+                </div>
+            </div>
         </div>
     </header>
     <div>

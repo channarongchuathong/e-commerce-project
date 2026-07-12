@@ -1,6 +1,7 @@
-export function setupSearch() {
-    const searchInput = document.getElementById("search-input")
+export function setupSearch(searchInput) {
+
     if (!searchInput) return
+
     searchInput.addEventListener("keydown", (event) => {
 
         if (event.key === "Enter") {
@@ -8,4 +9,17 @@ export function setupSearch() {
         }
     })
 
+}
+
+export function setupSearchMobile(searchButton, searchContainer, searchInput) {
+
+    if (!searchButton || !searchContainer || !searchInput) return;
+    
+    searchButton.addEventListener(("click"), () => {
+        searchContainer.classList.toggle("hidden")
+
+        if(!searchContainer.classList.contains("hidden")) {
+            searchInput.focus()
+        }
+    })
 }

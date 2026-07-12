@@ -1,6 +1,6 @@
 import { products } from "./products.js";
 import { createProductCard, renderProducts } from "./render.js";
-import { setupSearch } from "./seach.js";
+import { setupSearch, setupSearchMobile } from "./seach.js";
 
 const bestSellerContainer = document.getElementById("bestSellerContainer")
 const newArrivalsContainer = document.getElementById("newArrivals")
@@ -84,5 +84,12 @@ nextBest.addEventListener("click", () => {
 //// ค้นหาไปหน้า shop
 
 
+const searchInput = document.getElementById("search-input")
+setupSearch(searchInput)
 
-setupSearch()
+const searchButton = document.getElementById("search-mobile-button")
+const searchContainer = document.getElementById("search-mobile-container")
+const searchInputMobile = document.getElementById("search-input-mobile")
+setupSearch(searchInputMobile)
+
+setupSearchMobile(searchButton,searchContainer,searchInputMobile)

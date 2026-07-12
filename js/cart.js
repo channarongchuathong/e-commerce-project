@@ -1,5 +1,5 @@
 import { products } from "./products.js"
-import { setupSearch } from "./seach.js"
+import { setupSearch,setupSearchMobile } from "./seach.js"
 
 let cart = JSON.parse(localStorage.getItem("cart")) || []
 
@@ -43,7 +43,7 @@ export function renderCart(cart, cartContainer) {
         cartCard.innerHTML = ` <div class="rounded-lg overflow-hidden">
                                 <img src="${selectedColor.images[0]}" alt="" class="w-35 h-40 object-cover">
                             </div>
-                            <div class="flex justify-between flex-1 py-[10px] px-[20px]">
+                            <div class="flex justify-between flex-1 py-[10px] px-2 lg:px-[20px]">
                                 <div class="flex flex-col justify-between">
                                     <div>
                                         <h1 class="text-xl font-bold">${product.name}</h1>
@@ -66,10 +66,10 @@ export function renderCart(cart, cartContainer) {
                                         </button>
                                     </div>
                                     <div
-                                        class="flex justify-between w-25 p-1 px-4 gap-3 items-center rounded-full bg-base-200 font-bold">
-                                        <button  data-action="decrease" class="hover:cursor-pointer font-bold text-xl">-</button>
+                                        class="flex justify-center lg:justify-between w-15 lg:w-25 p-1 px-4 gap-2 lg:gap-3 items-center rounded-full bg-base-200 font-semibold">
+                                        <button  data-action="decrease" class="hover:cursor-pointer font-bold text-md lg:text-xl">-</button>
                                         <div>${cartItem.quantity}</div>
-                                        <button  data-action="increase" class="hover:cursor-pointer font-bold text-xl">+</button>
+                                        <button  data-action="increase" class="hover:cursor-pointer font-bold text-md lg:text-xl">+</button>
                                     </div>
                                 </div>
                             </div>
@@ -181,3 +181,13 @@ placeOrderBtn.addEventListener(("click"), () => {
 
 
 setupSearch()
+
+const searchInput = document.getElementById("search-input")
+setupSearch(searchInput)
+
+const searchButton = document.getElementById("search-mobile-button")
+const searchContainer = document.getElementById("search-mobile-container")
+const searchInputMobile = document.getElementById("search-input-mobile")
+setupSearch(searchInputMobile)
+
+setupSearchMobile(searchButton,searchContainer,searchInputMobile)
