@@ -20,7 +20,8 @@ export const products = [
                 value: "#FFFFFF",
                 images: [
                     "/img/product-casual/t-shirt-white-1.png",
-                    "/img/product-casual/t-shirt-white-2.png"
+                    "/img/product-casual/t-shirt-white-2.png",
+                    "/img/product-size-shirt.png"
                 ]
             },
         ],

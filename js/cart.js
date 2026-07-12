@@ -41,17 +41,17 @@ export function renderCart(cart, cartContainer) {
         const cartCard = document.createElement("div")
         cartCard.className = "flex py-[20px]"
         cartCard.innerHTML = ` <div class="rounded-lg overflow-hidden">
-                                <img src="${selectedColor.images[0]}" alt="" class="w-35 h-40 object-cover">
+                                <img src="${selectedColor.images[0]}" alt="" class="w-30 h-30 lg:w-35 lg:h-40 object-cover">
                             </div>
                             <div class="flex justify-between flex-1 py-[10px] px-2 lg:px-[20px]">
                                 <div class="flex flex-col justify-between">
                                     <div>
-                                        <h1 class="text-xl font-bold">${product.name}</h1>
-                                        <p>Size : ${cartItem.size}</p>
-                                        <p>Color : ${cartItem.color}</p>
+                                        <h1 class="lg:text-xl font-bold">${product.name}</h1>
+                                        <p class="text-sm lg:text-lg">Size : ${cartItem.size}</p>
+                                        <p class="text-sm lg:text-lg">Color : ${cartItem.color}</p>
                                     </div>
                                     <div>
-                                        <h1 class="text-xl font-bold">$${product.price}</h1>
+                                        <h1 class="lg:text-xl font-bold">$${product.price}</h1>
                                     </div>
                                 </div>
                                 <div class="flex flex-col justify-between">
@@ -66,7 +66,7 @@ export function renderCart(cart, cartContainer) {
                                         </button>
                                     </div>
                                     <div
-                                        class="flex justify-center lg:justify-between w-15 lg:w-25 p-1 px-4 gap-2 lg:gap-3 items-center rounded-full bg-base-200 font-semibold">
+                                        class="flex justify-center lg:justify-between w-20 lg:w-25 p-1 px-4 gap-4 items-center rounded-full bg-base-200 font-semibold">
                                         <button  data-action="decrease" class="hover:cursor-pointer font-bold text-md lg:text-xl">-</button>
                                         <div>${cartItem.quantity}</div>
                                         <button  data-action="increase" class="hover:cursor-pointer font-bold text-md lg:text-xl">+</button>
