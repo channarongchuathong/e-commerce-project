@@ -1,0 +1,39 @@
+.noUi-target {
+    background: #e5e5e5;
+    border: none;
+    border-radius: 999px;
+    box-shadow: none;
+    height: 6px;
+}
+
+.noUi-connect {
+    background: #000000;
+}
+
+.noUi-handle {
+    width: 18px !important;
+    height: 18px !important;
+    right: -9px !important;
+    top: -6px !important;
+
+    border: none;
+    border-radius: 999px;
+    background: #000;
+    box-shadow: none;
+    cursor: pointer;
+
+}
+
+.noUi-handle::before,
+.noUi-handle::after {
+    display: none;
+}
+
+
+.noUi-handle:hover {
+    transform: scale(1.1);
+}
+
+.noUi-state-drag {
+    cursor: grabbing;
+}
