@@ -6,6 +6,20 @@
 
 - 🌐 Live Website: [project-ecommerce-amber.vercel.app/](https://project-ecommerce-amber.vercel.app/)
 
+## 📸 Screenshots
+
+### 🏠 Home
+
+![Home](./screenshots/home.jpg)
+
+### 🛍 Shop
+
+![Shop](./screenshots/shop.jpg)
+
+### 👕 Product Detail
+
+![Product Detail](./screenshots/detail.jpg)
+
 ## ฟีเจอร์
 
 - หน้าแรกแสดงสินค้าเข้าใหม่และสินค้าขายดี
